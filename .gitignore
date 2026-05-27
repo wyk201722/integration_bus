@@ -1,0 +1,11 @@
+# integration-bus session files — keep schema/runbooks, drop ephemeral logs
+state/*.jsonl
+!state/.gitkeep
+instructions/*.md
+!instructions/.gitkeep
+
+# Keep milestones (they are the historical record)
+# milestones/ is intentionally NOT ignored
+
+# OS
+.DS_Store

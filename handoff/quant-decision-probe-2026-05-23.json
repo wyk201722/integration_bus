@@ -1,0 +1,143 @@
+{
+  "_meta": {
+    "task": "quant-decision-probe-2026-05-23 (integration-bus instruction 2026-05-23T00:00:00+08:00)",
+    "produced_by": "stock-quant PRODUCTION path: ArbiterAgent.evaluate_eod -> KBSink.deliver -> KBClient.write_entry (the EXACT path stock #345 reports against). Idempotency-Key + body captured via spy on KBClient.write_entry; independent curl re-issued with the same idem+body to capture response verbatim.",
+    "serialization": "on-wire = json.dumps(entry, ensure_ascii=False, allow_nan=False, separators=(',', ':')); httpx default JSON encoder used by KBClient.write_entry (kb/client.py:825)",
+    "on_wire_bytes_sha256": "f7295289e69638324447ffa7aff16dee9be2c7017fd4635dafac6681bc237a6c",
+    "on_wire_bytes_len": 1250,
+    "idempotency_key_sent": "arbiter:2026-05-17T15:00:00+08:00:da39c5f07a243c38",
+    "idempotency_key_format": "Decision.idempotency_key() = '{agent_id}:{timestamp.isoformat()}:{jcs_hash[:16]}'"
+  },
+  "auth_sanity_check": {
+    "healthz_with_X_API_Key": {
+      "status": 200,
+      "body": "{\"ok\":true,\"schema_version\":\"memory-store@1\",\"uptime_sec\":222464,\"version\":\"0.1.0\",\"mode\":\"embedded\",\"deps\":{\"sqlite_ok\":true,\"qdrant_ok\":false,\"kg_store_ok\":false,\"vault_watcher_ok\":false},\"categorie"
+    },
+    "note": "X-API-Key authenticates fine (healthz 200). Failure on /v1/entries is NOT 401."
+  },
+  "contracts": {
+    "vendored_path": "reobsidian-kb-contracts/schemas/entry.json (in-tree git clone)",
+    "contracts_repo_HEAD": "9d43b2f5e6f7a538c220827ed1ffa4a1dcecc8d4",
+    "contracts_dir_dirty": false,
+    "contracts_dir_status": "clean",
+    "schema_path": "reobsidian-kb-contracts/schemas/entry.json",
+    "schema_sha256": "9d481cee1ac0f5e97c3518ebca9129ae25d7036827422255b0719210b78c6e93",
+    "schema_mtime_local": "2026-05-01T11:36:01.761166",
+    "schema_log_last5": [
+      "9d43b2f 2026-04-29 14:51:27 +0800 feat: absorb quant review (regex / import summary / filter docs / risk_check / metric units)",
+      "3bad452 2026-04-29 05:37:05 +0000 feat(contracts): KB-Quant Memory Extension v0.1-draft"
+    ],
+    "stock_repo_HEAD": "d8be4eb65a88dd0cb14fdc08f833f873751be936",
+    "decision_pydantic_model": "src/stock_quant/signals/contract.py (Decision @ line 1374)",
+    "since_2026_05_15": "Contracts repo last touched schemas/entry.json on 2026-04-29 (commit 9d43b2f); no quant-side pull of newer contracts since 2026-05-15. Vendored file is identical to the version under which M0 L4+L5 closed."
+  },
+  "payload": {
+    "category": "decision",
+    "observed_at": "2026-05-17T15:00:00+08:00",
+    "valid_from": null,
+    "valid_to": null,
+    "source": {
+      "kind": "agent",
+      "id": "arbiter",
+      "version": "0.1.0"
+    },
+    "entities": [
+      "Decision:300750.SZ",
+      "arbiter_decisions"
+    ],
+    "tags": [
+      "arbiter:agreement",
+      "horizon:5d",
+      "arbiter",
+      "direction:BUY",
+      "llm_path:false",
+      "conflict_detected:false",
+      "resolved_by:rule"
+    ],
+    "confidence": 0.651,
+    "payload": {
+      "agent_id": "arbiter",
+      "agent_version": "0.1.0",
+      "decision_id": "01KRTBR3C0TQFMFHEGZZJRSH45",
+      "symbol": "300750.SZ",
+      "direction": "BUY",
+      "horizon_bucket": "5d",
+      "position_size_recommendation": 0.1,
+      "systemic_risk_ceiling": 0.8,
+      "evidence_refs": [
+        {
+          "signal_id": "r1_short_event_scorer:2026-05-17T14:00:00+08:00:a4d792c9e71475d7",
+          "pn_agent": "r1_short_event_scorer",
+          "weight": 0.33913
+        },
+        {
+          "signal_id": "r2_valuation_paradigm:2026-05-17T13:00:00+08:00:6a6393e71d770d0a",
+          "pn_agent": "r2_paradigm_switcher",
+          "weight": 0.313043
+        },
+        {
+          "signal_id": "r4_systemic_risk:2026-05-17T14:30:00+08:00:a05fc315ab9dbe3e",
+          "pn_agent": "r4_systemic_risk",
+          "weight": 0.347826
+        }
+      ],
+      "llm_path_used": false,
+      "llm_cost_usd": 0.0,
+      "conflict_detected": false,
+      "conflict_resolved_by": "rule",
+      "reason": "R1 (+0.750, conf=0.78) and R2 (paradigm=0.700, conf=0.72) agree; R4 calm (risk=0.40). Conviction=0.651 (CA-3 mult=1.000).",
+      "red_team_dissent_id": null
+    }
+  },
+  "prod_vs_l4_fixture_divergence": {
+    "prod_keys": [
+      "category",
+      "confidence",
+      "entities",
+      "observed_at",
+      "payload",
+      "source",
+      "tags",
+      "valid_from",
+      "valid_to"
+    ],
+    "l4_fixture_keys": [
+      "category",
+      "entities",
+      "observed_at",
+      "payload",
+      "source",
+      "tags",
+      "valid_from",
+      "valid_to"
+    ],
+    "prod_only_keys": [
+      "confidence"
+    ],
+    "l4_only_keys": [],
+    "note": "DIVERGENCE FOUND. Prod adds 'confidence' (hoisted from Decision.conviction per ADR-0013); L4 fixture omits it. Prod entities = ['Decision:{sym}', 'arbiter_decisions'] (per ADR-0023/0013-amend 2026-05-19); L4 fixture entities = ['{sym}']. Prod 'payload' is Decision.to_kb_entry_payload() (rich Decision shape: direction/conviction/horizon_bucket/position_size_recommendation/systemic_risk_ceiling/evidence_refs/llm_path_used/llm_cost_usd/conflict_detected/conflict_resolved_by/reason/decision_id/red_team_dissent_id/replay_snapshot_ref); L4 fixture payload is a much simpler {action, symbol, size_pct, horizon, candidate_signal_ids, arbitration} shape — an old M0-era ad-hoc shape that predates ADR-0013. THE L4 FIXTURE HAS NOT BEEN UPDATED TO REFLECT THE DECISION CONTRACT POST-ADR-0013. Whether the L4 fixture should be updated to mirror ADR-0013 is itself a routing question; for the purposes of the 400, the prod path is the authoritative shape under test."
+  },
+  "daemon_response_via_kb_sink": {
+    "status_code": 400,
+    "code": "VALIDATION_FAILED",
+    "message": "Payload validation failed for category 'decision'",
+    "exception_type": "KBValidationError"
+  },
+  "daemon_response_via_independent_curl": {
+    "status": 400,
+    "body": "{\"error\":{\"code\":\"VALIDATION_FAILED\",\"message\":\"Payload validation failed for category 'decision'\",\"retryable\":false,\"request_id\":\"kb-req-QTaGfN0ar\"}}",
+    "body_json": {
+      "error": {
+        "code": "VALIDATION_FAILED",
+        "message": "Payload validation failed for category 'decision'",
+        "retryable": false,
+        "request_id": "kb-req-QTaGfN0ar"
+      }
+    },
+    "request_id_header": null,
+    "request_id_from_body": "kb-req-QTaGfN0ar",
+    "content_type": "application/json; charset=utf-8",
+    "kb_base_url": "http://127.0.0.1:7733",
+    "auth_posture": "X-API-Key (same key /v1/healthz 200 confirms above)"
+  }
+}

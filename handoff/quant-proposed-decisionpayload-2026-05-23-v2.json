@@ -1,0 +1,253 @@
+{
+  "_meta": {
+    "task": "PROPOSAL v2 ONLY — DO NOT APPLY (integration-bus instruction 2026-05-23T18:00:00+08:00 §3 counter_propose response)",
+    "supersedes_v1_in_negotiation": "handoff/quant-proposed-decisionpayload-2026-05-23.json (frozen audit trail; sha256=43fb36c65fd8ddb244f7045ef5c1a944227b74be0a923019c3814b5fdee0633e)",
+    "produced_by": "stock-quant orchestrator (quant role) in response to KB patch_review @ 2026-05-23T17:39:48+08:00 (verdict=counter_propose)",
+    "kb_objection_absorbed": "v1 referenced #/$defs/EvidenceRef which KB confirmed is absent from both KB and quant schema files. ADR-0011 introduced EvidenceRef in the quant Pydantic model (src/stock_quant/signals/contract.py:954) but never landed it in reobsidian-kb-contracts/schemas/entry.json. v2 bundles the authoritative EvidenceRef $defs block so the contracts-repo PR adds BOTH $defs.DecisionPayload (per v1) AND $defs.EvidenceRef (per this v2) in the same patch — AJV2020 compiles clean.",
+    "patch_revision_verdict": "accept",
+    "patch_revision_rationale": "KB's counter-proposal is purely additive (bundle the missing EvidenceRef $def). It demands no removal of any field quant considers load-bearing. Quant therefore accepts the amendment as expressed in v2 — DecisionPayload block carries forward from v1 unchanged (KB confirmed structurally correct, compiles clean once EvidenceRef is present, validates the proof-probe valid payload with 13 fields set; rejects the old-shape proof-probe payload with 12 required-field errors).",
+    "applies_to_when_landed_by_kb_in_round_4": [
+      "reobsidian-kb-contracts/schemas/entry.json (standalone repo)",
+      "reobsidian/contracts/schemas/entry.json (in-tree mirror)",
+      "NarrativeAnalogPayload back-port (round-2 housekeeping; KB-noted optional same-PR fold)"
+    ]
+  },
+  "patch_revision": {
+    "responding_to": "kb patch_review @ 2026-05-23T17:39:48+08:00 (verdict=counter_propose)",
+    "verdict": "accept",
+    "kb_review_question_answers_acked": {
+      "Q1_ajv_compile": "Acknowledged: as-is FAILS on MissingRefError #/$defs/EvidenceRef. v2 bundles EvidenceRef → compiles clean.",
+      "Q2_evidenceref_path": "Acknowledged: my Q2 premise (EvidenceRef already exists per ADR-0011) was wrong. ADR-0011 introduced the concept in quant's Pydantic; never landed in entry.json. v2 carries the authoritative shape (signal_id/pn_agent/weight per src/stock_quant/signals/contract.py:954 + verified against prod payload).",
+      "Q3_entry_confidence_doc": "Accept KB's Q3 recommendation verbatim — non-binding additive sentence on entry.confidence description, no shape change. Bundled as optional sibling op in v2.",
+      "Q4_old_shape_removal": "KB agrees with quant: no v0.2 back-compat. v2 preserves quant's outcome-caveat handling (outcome lives as a separate post-hoc PATCH path or new $defs.DecisionOutcome — NOT re-added to DecisionPayload).",
+      "Q5_routing": "Settled (Path B). No re-litigation.",
+      "Q5_validation_cost_added": "Acknowledged: KB validation-cost audit reports cheap_no_concerns; all regex linear, no AJV2020-only features, no relaxation needed."
+    },
+    "diffs_from_v1": [
+      "(a) Add $defs.EvidenceRef block (NEW — absorbs KB's required amendment).",
+      "(b) Add optional sibling op describing the entry.confidence description doc-update (KB Q3).",
+      "(c) DecisionPayload block UNCHANGED from v1 (KB confirmed structurally correct).",
+      "(d) Record schema_version bump @1→@2 per KB Q-meta + migration plan per KB migration_call."
+    ],
+    "no_pushback_emitted": true,
+    "request_help_emitted": false,
+    "request_help_rationale": "No KB amendment demands removal of a load-bearing field. Per round-3 hard-rule, request_help is the channel for that — not used."
+  },
+  "proposed_$defs.DecisionPayload": {
+    "title": "DecisionPayload",
+    "description": "PROPOSED replacement for the existing $defs.DecisionPayload (HEAD 9d43b2f, 2026-04-29). The signed block describes a pre-ADR-0013 shape (M0/Phase-1 ad-hoc {action, candidate_signal_ids, arbitration}). Stock-quant landed ADR-0013 (2026-05-17, architect + cyril solo, quant-ratified, no reobsidian counter-party) which replaced that vocabulary entirely, then ADR-0023 (2026-05-19, same author/decider) amended decision_to_entry's entities[] projection. The post-ADR-0013/0023 shape below is what stock-quant's prod KBSink.deliver currently sends and what the daemon rejects with VALIDATION_FAILED (handoff/quant-decision-probe-2026-05-23.json, request_id=kb-req-QTaGfN0ar). Routing audit: quant_internal — the contracts repo schema was never updated when the ADRs landed. This PROPOSAL is a sibling-amendment candidate; KB + orchestrator review before any apply to the contracts repo.",
+    "type": "object",
+    "required": [
+      "decision_id",
+      "direction",
+      "conviction",
+      "horizon_bucket",
+      "position_size_recommendation",
+      "systemic_risk_ceiling",
+      "evidence_refs",
+      "llm_path_used",
+      "llm_cost_usd",
+      "conflict_detected",
+      "conflict_resolved_by",
+      "reason"
+    ],
+    "properties": {
+      "decision_id": {
+        "type": "string",
+        "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$",
+        "description": "ULID (Crockford base32, 26 chars). Stable cross-PATCH identifier used by red-team (ADR-0014) Dissent envelopes to back-reference + by downstream consumers for join keys. EXCLUDED from idempotency_key derivation per ADR-0013 §'Idempotency-Key derivation' (post-generated at emit time). Authoritative source: ADR-0013."
+      },
+      "agent_id": {
+        "type": "string",
+        "const": "arbiter",
+        "description": "Always 'arbiter' at v0.1.0 (ADR-0013). Duplicated in entry.source.id; kept inside payload for backward-readable archives where source.id might be aliased."
+      },
+      "agent_version": {
+        "type": "string",
+        "pattern": "^\\d+\\.\\d+\\.\\d+$",
+        "description": "Semantic version of the arbiter agent (e.g. '0.1.0'). Duplicated in entry.source.version."
+      },
+      "symbol": {
+        "type": "string",
+        "pattern": "^[0-9]{6}\\.(SH|SZ|BJ)$",
+        "description": "A-share ticker the decision applies to. ADR-0013 + skeleton §6.1 contract."
+      },
+      "direction": {
+        "type": "string",
+        "enum": [
+          "BUY",
+          "SELL",
+          "HOLD"
+        ],
+        "description": "Decision direction (ADR-0013). Replaces the pre-ADR-0013 'action' enum (open/add/reduce/close/hold/rebalance) — the arbiter contracts are binary-direction, not position-state-transitions. Auto-tagged as tag 'direction:{BUY|SELL|HOLD}' on entry.tags (ADR-0013 §KB Entry mapping)."
+      },
+      "conviction": {
+        "type": "number",
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "description": "Decision conviction [0,1] (ADR-0013). Hoisted to entry.confidence per ADR-0013 §KB Entry mapping ('hoisted by KB design, entry.json:91'); carried inside payload too for archival completeness. The Entry-level confidence field already admits this (entry.json $defs Entry/properties/confidence is number 0..1, nullable)."
+      },
+      "horizon_bucket": {
+        "type": "string",
+        "enum": [
+          "1d",
+          "5d",
+          "10d",
+          "20d",
+          "60d"
+        ],
+        "description": "ADR-0011 HorizonBucket vocabulary (1d/5d/10d/20d/60d). Replaces the pre-ADR-0013 'horizon' enum (intraday/1-2d/2-5d/5-20d/20-60d/60d+) — the stock-quant reasoning-layer contracts ADR-0011 standardized on point-bucket anchors, not range-bucket strings. Auto-tagged as tag 'horizon:{bucket}' on entry.tags. If a coarser cross-system vocabulary is desirable, the bus should negotiate that — but the prod path is anchored on ADR-0011."
+      },
+      "position_size_recommendation": {
+        "type": "number",
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "description": "Fraction of allowed position [0,1] (ADR-0013). Renamed from the pre-ADR-0013 'size_pct'. Per ADR-0013 §position-cap, the arbiter agent enforces the skeleton-§6.1.1 ≤ 0.10 hard cap at emit boundary (the Pydantic bound is permissive at [0,1] to leave room for M5+ to lift the cap by-agent without a contract bump)."
+      },
+      "systemic_risk_ceiling": {
+        "type": "number",
+        "minimum": 0.25,
+        "maximum": 1.0,
+        "description": "R4 position_ceiling at decision time (ADR-0013 + the R4 ratification docs/quant/m2-t17-r4-ratification.md item 3 floor=0.25). Bounds the arbiter's accepted position scaling under systemic risk. Not in the pre-ADR-0013 shape."
+      },
+      "evidence_refs": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 32,
+        "items": {
+          "$ref": "#/$defs/EvidenceRef"
+        },
+        "description": "Back-pointers to R-signal envelope idempotency-keys (ADR-0013 + ADR-0011 EvidenceRef reuse). Replaces the pre-ADR-0013 'candidate_signal_ids' (plain string list) — evidence_refs carry a richer typed sub-shape (ref, source, weight, observed_at) per ADR-0011 §EvidenceRef. The DecisionPayload $defs MUST reference the existing #/$defs/EvidenceRef block — no shape duplication. min_length=1: arbiter cannot emit a Decision without at least one R-signal input."
+      },
+      "llm_path_used": {
+        "type": "boolean",
+        "description": "True iff the LLM slow-path was invoked (Case C or fallback) per ADR-0013. Auto-tagged as tag 'llm_path:true/false'. Not in the pre-ADR-0013 shape."
+      },
+      "llm_cost_usd": {
+        "type": "number",
+        "minimum": 0.0,
+        "maximum": 2.0,
+        "description": "Per-decision LLM cost in USD (ADR-0013). 0.0 when llm_path_used=False. Consumed by the cost-alerts aggregation (src/stock_quant/llm/cost_alerts.py). Not in the pre-ADR-0013 shape."
+      },
+      "conflict_detected": {
+        "type": "boolean",
+        "description": "True iff the arbiter rule path classified inputs as Case C (rule-irreconcilable conflict) per ADR-0013. Auto-tagged as tag 'conflict_detected:true/false'."
+      },
+      "conflict_resolved_by": {
+        "type": "string",
+        "enum": [
+          "rule",
+          "llm",
+          "unresolved"
+        ],
+        "description": "How the arbiter resolved the conflict: 'rule' (Case A/B/D — rule-decidable), 'llm' (Case C — LLM slow-path), 'unresolved' (abstained). Auto-tagged as tag 'resolved_by:{rule/llm/unresolved}'. ADR-0013."
+      },
+      "reason": {
+        "type": "string",
+        "maxLength": 2000,
+        "description": "Human-readable rationale (ADR-0013, ≤2000 chars). Top-level on payload for archive readability — moved out of the pre-ADR-0013 'arbitration.reason' nested location because the arbitration sub-object was removed in ADR-0013's flatter shape."
+      },
+      "red_team_dissent_id": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$",
+        "description": "ULID of the red-team Dissent that back-references this Decision. NULL at emit time; PATCH-updated by red-team agent (ADR-0014). EXCLUDED from idempotency_key derivation. Replaces the pre-ADR-0013 nested 'redteam' sub-object (strength/challenges/verdict) — the Dissent envelope is now a separate KB Entry (category=event, tag:red_team_dissent per ADR-0014), joined by id back-reference."
+      }
+    },
+    "$comment_required_rationale": "REQUIRED reflects ADR-0013's load-bearing emit guarantees. Excluded from required: agent_id (defaultable 'arbiter'), agent_version (Pydantic-enforced, can default), symbol (Pydantic-pattern-enforced, can default-include — though prod always emits), red_team_dissent_id (nullable post-hoc PATCH per ADR-0014). The pre-ADR-0013 required [action, candidate_signal_ids, arbitration] is fully obsolete — none of those keys exist in the post-ADR-0013 shape.",
+    "$comment_additionalProperties": "Intentionally NOT setting additionalProperties: false here. ADR-0011 established EventPayload-level additionalProperties permissiveness (unset = true under JSON Schema 2020-12) for forward-compatibility with quant-side fields KB doesn't yet index. ADR-0013 §additionalProperties confirms this applies to Decision too. Future fields (e.g. R5 crowding flag M5+) can land without a schema bump.",
+    "$comment_field_removed_pre_adr_0013": [
+      "action (replaced by direction; semantically narrower — direction is the arbiter's decision; action is a position-management verb that belongs at the execution layer, not the arbiter contract).",
+      "candidate_signal_ids (replaced by evidence_refs with richer EvidenceRef shape).",
+      "arbitration.{path,confidence,reason} (flattened: path/confidence absorbed into conflict_resolved_by/conviction; reason hoisted to top-level).",
+      "risk_check (moved to a separate KB Entry pattern OR per-decision attached via the ADR-0023 operator surface; NOT in the M2 Decision contract).",
+      "redteam (replaced by red_team_dissent_id back-ref + separate Dissent Entry per ADR-0014).",
+      "disprove (defers to ADR-0035 Disprove DisproveRecord — separate Entry kind, M6).",
+      "outcome (post-hoc PATCH path is unchanged; lives in a separate $defs.DecisionOutcome block OR remains as an optional property — orchestrator + KB to decide on review)."
+    ],
+    "$comment_outer_entry_confidence_hoist": "Decision.conviction (payload) is hoisted to entry.confidence (top-level, outer Entry definition). The existing entry.json $defs Entry/properties/confidence field is type:number, minimum:0, maximum:1, nullable — that admits the hoist without an outer Entry shape change. The description on entry.confidence currently mentions 'category=event coupling' (the EventPayload §4.0 signal contract); a non-binding doc update could note that category=decision also populates this field from DecisionPayload.conviction. No JSON Schema bump on Entry needed."
+  },
+  "proposed_$defs.EvidenceRef": {
+    "title": "EvidenceRef",
+    "description": "Back-pointer from an R-signal (or Decision) to a source Pn / upstream R signal envelope. Authoritative shape per ADR-0011 §EvidenceRef + src/stock_quant/signals/contract.py:954 (verified against the prod-emitted runtime shape in handoff/quant-decision-probe-2026-05-23.json payload.evidence_refs[]). Differs from raw-data 'Evidence' references (filings / news / tushare_row): EvidenceRef joins one signal envelope to another via the source's Idempotency-Key.",
+    "type": "object",
+    "required": [
+      "signal_id",
+      "pn_agent",
+      "weight"
+    ],
+    "properties": {
+      "signal_id": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 128,
+        "description": "Idempotency-Key of the source signal envelope — i.e. the value returned by Signal.idempotency_key() / SectorSignal.idempotency_key() / MarketRegimeSignal.idempotency_key() / ReasoningSignal.idempotency_key(). Forms the join key for KB queries back to the source entry."
+      },
+      "pn_agent": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_]*$",
+        "maxLength": 64,
+        "description": "agent_id of the upstream emitter (e.g. 'p1_quotes_anomaly', 'p2_earnings_event', 'r1_short_event_scorer'). Mirrors ADR-0004 namespace."
+      },
+      "weight": {
+        "type": "number",
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "description": "Weight applied to the source signal during the upstream aggregation. Recommended convention (ADR-0011 §'Weight normalization' / Open Question #1): weights across an evidence_refs[] list SUM to 1.0. The validator enforces per-weight bounds only; sum-to-one is a per-agent contract decision in the agent's module spec, not a schema-level invariant."
+      }
+    },
+    "$comment_additionalProperties": "Intentionally not setting additionalProperties: false at the schema level — mirrors EventPayload/DecisionPayload permissiveness (ADR-0011 §'KB-side coordination'). Pydantic on the quant side enforces extra='forbid' (src/stock_quant/signals/contract.py:974 model_config) but that's a producer-side guarantee; consumers should tolerate future additive fields without a schema bump.",
+    "$comment_kb_floor_vs_authoritative": "KB's review-suggested floor stub used field names {ref, source, weight, observed_at}; the authoritative ADR-0011 names are {signal_id, pn_agent, weight}. The prod payload already emits the authoritative shape. observed_at is NOT part of EvidenceRef — the timestamp lives on the source signal envelope itself, retrieved via signal_id join. KB's review explicitly admits 'anything richer that quant authoritatively writes from ADR-0011' (patch_review Q2_answer.kb_required_amendment)."
+  },
+  "outer_Entry_confidence_note": {
+    "field": "entry.confidence (top-level on Entry, not in DecisionPayload)",
+    "current_state": "type:number, minimum:0, maximum:1, nullable; description mentions 'category=event coupling with skeleton §4.0 confidence'",
+    "prod_behavior": "decision_to_entry hoists Decision.conviction to entry.confidence (ADR-0013 §KB Entry mapping)",
+    "schema_change_required": false,
+    "non_binding_doc_update_recommended": "Update entry.confidence's description to note that category=decision also populates this field (from DecisionPayload.conviction). No JSON Schema field-shape bump."
+  },
+  "optional_sibling_jsonpatch_ops_for_same_PR": {
+    "entry_confidence_description_doc_update": {
+      "op": "extend_description",
+      "path": "/properties/confidence/description",
+      "summary": "Non-binding additive sentence; no shape change.",
+      "current_description_cn_quoted": "条目本身的可靠性。可空(则继承 source 默认值)。**对于 category=event 的 entry,本字段值等于 skeleton §4.0 信号契约的 `confidence` 字段**(语义合并,不再 payload 内重复)。",
+      "added_sentence_cn": "**对于 category=decision 的 entry,本字段值等于 DecisionPayload.conviction**(语义合并,不再 payload 内重复)。",
+      "added_sentence_en_optional": "For category=decision entries, this field equals DecisionPayload.conviction (semantic merge — not duplicated inside payload).",
+      "rationale": "Decision shape hoists DecisionPayload.conviction → entry.confidence, identical pattern to the existing event-coupling note. Quant accepts KB's Q3 recommendation as-written.",
+      "shape_change_required": false
+    },
+    "narrative_analog_payload_back_port": {
+      "summary": "KB's round-2 blocker closure noted NarrativeAnalogPayload exists in reobsidian/contracts/ (in-tree) but NOT in the standalone reobsidian-kb-contracts (commit 52900ab gap). Quant has NOT pulled NarrativeAnalogPayload (per hard-rule). KB owns the back-port commit; quant simply pulls reobsidian-kb-contracts after KB lands the PR.",
+      "applied_by_quant": false,
+      "applied_by_kb": "to be decided at round-4 (orchestrator routes; KB suggests same-PR fold but it's optional)."
+    }
+  },
+  "schema_version_bump_quant_acked": {
+    "from": "memory-store@1",
+    "to": "memory-store@2",
+    "bump_class": "major",
+    "rationale_acked_verbatim_from_kb": "Non-backwards-compatible: the DecisionPayload.required set changes from [action, candidate_signal_ids, arbitration] to a 12-field set with NO overlap. All four pre-ADR-0013 required fields are removed; 12 new required fields added. No client written against @1 can write against @2 without code changes.",
+    "healthz_advertisement_impact_acked": "daemon will advertise schema_version='memory-store@2' in /v1/healthz; RAG-side cache invalidation triggers on the version-string change."
+  },
+  "migration_plan_quant_acked": {
+    "migration_required": true,
+    "existing_decision_rows_total_kb_reported": 693,
+    "existing_rows_are_slo_fixtures_kb_reported": true,
+    "recommended_apply_time_action_acked": "DELETE FROM entries WHERE category='decision'; (or equivalent purge) BEFORE @2 lands. Zero archival value.",
+    "stock_quant_will_re_emit_after_apply": "Stock-quant has process-local _decision_writes_gated_count instrumentation in kb_sink.py (added round-3); gated count grows for the duration of the gate. Once @2 is loaded and gate is un-set at round-4, the next DAILY_EOD tick (~15:30 +08:00) will resume normal write traffic against the new schema. No buffered replay of gated emissions is attempted (the gate is no-op-skip, not buffered).",
+    "outcome_field_caveat_acked": "KB Q4 caveat: 'outcome' field is intentionally NOT re-added to DecisionPayload. Decision outcomes are post-hoc; they live in a separate KB entry (current path: PATCH bump entry.version with outcome populated; future path: $defs.DecisionOutcome as a separate $defs block in a future amendment if richer typing is wanted). Quant agrees."
+  },
+  "next_step_handoff": {
+    "round_4_owner": "kb (commits the contracts-repo PR with DecisionPayload + EvidenceRef + optional entry.confidence doc-update + optional NarrativeAnalogPayload back-port)",
+    "stock_quant_round_4_actions_when_kb_lands_apply_instruction": [
+      "Pull reobsidian-kb-contracts after KB's PR is merged + KB confirms daemon loaded the @2 schema (healthz schema_version advertisement).",
+      "Re-run handoff/quant-decision-probe-2026-05-23.json prod-path emission against the new schema; confirm POST /v1/entries returns 200.",
+      "Realign tests/kb_contract/test_l4_live_rest.py::_decision_payload() to mirror prod (the L4 fixture realignment that round-3 explicitly forbade).",
+      "Unset STOCK_KB_DECISION_WRITES_DISABLED in .env (or set to 0); verify in-process probe returns to normal write path.",
+      "Close stock #345 with cross-project trace pointer to state/quant.jsonl @ 2026-05-23."
+    ]
+  }
+}
