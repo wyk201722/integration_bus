@@ -1,0 +1,1241 @@
+{
+  "schema": "kb-chain-verification@1",
+  "generated_for": "stock-quant chain-KG consume-side (ADR-0077 Pillar B / ADR-0075 D2)",
+  "scope": "ai_compute",
+  "proof": "single-stage opus",
+  "subject_invariant": "target_exposure (denominator = target own revenue/COGS) — ratified Q2 / OQ-R1",
+  "firewall": "advisory/read-only; KB never pins a sign or writes the graph; human last-look disposes",
+  "legend": {
+    "divergence_kind": "definition_error_recurate_down = curated used SOURCE subject → adopt proof_revenue_share; real_refresh_bitemporal = same subject, value moved → append proof as new observed_at; propose = no curated value; ok = corroborated; no_fresh = proof returned none",
+    "subject_check": "target_exposure = comparable to proof; source_subject_suspect = curated encoded source concentration (not comparable, re-curate)"
+  },
+  "count": 37,
+  "rows": [
+    {
+      "scope": "ai_compute",
+      "source": "005930",
+      "target": "002129.SZ",
+      "edge_type": "customer",
+      "curated_sign": "+1",
+      "proof_sign": "±",
+      "curated_revenue_share": 0.1,
+      "proof_revenue_share": null,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "no_fresh",
+      "sign_verdict": "⚠ proof stays ± (curated +1) → reconsider / re-curate",
+      "revenue_share_verdict": "? no fresh estimate",
+      "graph_action": "DEMOTE to presence-only pending re-curation (proof would not pin the sign)",
+      "proof_basis": "TCL中环未官方披露半导体前五大客户；唯一行业整理的前五大为中芯国际/长鑫/长江存储/英伟达/英特尔·台积电，三星不在其中，且其半导体业务以功率重掺及国产存储/逻辑为主、12英寸尚在爬坡，三星硅片主由信越/SUMCO/SK Siltron等全球五大供应——Samsung→中环供货边无法证实，故净向歧义。",
+      "proof_revenue_share_basis": "半导体材料仅占002129营收一小部分(2024总营收284.18亿，其中光伏材料166.49亿+光伏电池组件58.11亿，半导体材料属剩余\"其他\"业务约一成)，且三星非已披露客户，目标对源暴露占比无法估计",
+      "curated_revenue_share_basis": "seed-recovered (cited disclosure); value=0.1",
+      "sources": [
+        {
+          "url": "https://caifuhao.eastmoney.com/news/20260525111241290032820",
+          "quote": "「TCL中环没公开披露\"半导体业务前五大客户\"的官方名单和占比」；「一、半导体业务前五大客户（按2025年营收规模排序）1. 中芯国际（SMIC）2. 长鑫存储（CXMT）3. 长江存储（YMTC）4. 英伟达（NVIDIA）5. 英特尔 / 台积电」"
+        },
+        {
+          "url": "https://static.cninfo.com.cn/finalpage/2025-04-26/1223330188.PDF",
+          "quote": "「光伏材料板块实现营业收入166.49亿元……光伏电池及组件业务板块实现营业收入58.11亿元」（2024年总营收284.18亿元，半导体材料为剩余少量业务）"
+        },
+        {
+          "url": "https://siscmag.com/news/show-4762.html",
+          "quote": "「中环股份半导体区熔单晶-硅片综合实力全国第一，国内市场占有率超过80%，国外市场占有率超过18%」（业务侧重区熔/功率器件，未提及三星）"
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "300394.SZ",
+      "target": "300308.SZ",
+      "edge_type": "supplier",
+      "curated_sign": "+1",
+      "proof_sign": "±",
+      "curated_revenue_share": 0.3,
+      "proof_revenue_share": 0.05,
+      "curated_is_estimate": false,
+      "subject_check": "source_subject_suspect",
+      "divergence_kind": "definition_error_recurate_down",
+      "sign_verdict": "⚠ proof stays ± (curated +1) → reconsider / re-curate",
+      "revenue_share_verdict": "⚠ DIVERGE (Δ0.25)",
+      "graph_action": "RE-CURATE revenue_share 0.3→0.05 (subject error: curated used source-concentration) · DEMOTE to presence-only pending re-curation (proof would not pin the sign)",
+      "proof_basis": "天孚是中际旭创的上游光器件供应商,供应陶瓷插芯(全球市占>40%)、光纤阵列(>50%)、1.6T光引擎(>65%)等无源/光引擎器件,关系真实;但这些器件仅占光模块BOM中较小份额,模块的主要成本与供应瓶颈在EML/CW激光芯片(短缺持续至2026年)而非天孚产能,故沿供应商→客户这条边向旭创盈利的传导弱、方向歧义(供货顺畅是弱利好,天孚提价/紧俏则为成本端弱利空)。",
+      "proof_revenue_share_basis": "无天孚占旭创成本的确切披露;无源光器件在光模块BOM中属低个位数占比,旭创又多自建封装/部分经Fabrinet,保守取低≈0.05(估计)",
+      "curated_revenue_share_basis": "seed-recovered (cited disclosure); value=0.3",
+      "sources": [
+        {
+          "url": "https://www.donews.com/article/detail/7331/99393.html",
+          "quote": "客户覆盖中际旭创、新易盛、华为、思科、谷歌、微软、亚马逊等全球头部玩家"
+        },
+        {
+          "url": "https://www.donews.com/article/detail/7331/99393.html",
+          "quote": "陶瓷插芯全球市占率超 40%，光纤阵列全球市占率超 50%，1.6T 光引擎全球市占率突破 65%"
+        },
+        {
+          "url": "https://m.c114.com.cn/w5472-1299618.html",
+          "quote": "EML、CW激光芯片的短缺预计将持续至2026年"
+        },
+        {
+          "url": "https://finance.sina.com.cn/stock/s/2025-08-26/doc-infnifvz8189198.shtml",
+          "quote": "天孚通信前五大客户销售占比已进一步提高至86.80%，第一大客户Fabrinet的销售额达20.06亿元，占年度销售总额的61.69%"
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "300394.SZ",
+      "target": "300502.SZ",
+      "edge_type": "supplier",
+      "curated_sign": "+1",
+      "proof_sign": "±",
+      "curated_revenue_share": 0.25,
+      "proof_revenue_share": 0.05,
+      "curated_is_estimate": false,
+      "subject_check": "source_subject_suspect",
+      "divergence_kind": "definition_error_recurate_down",
+      "sign_verdict": "⚠ proof stays ± (curated +1) → reconsider / re-curate",
+      "revenue_share_verdict": "⚠ DIVERGE (Δ0.20)",
+      "graph_action": "RE-CURATE revenue_share 0.25→0.05 (subject error: curated used source-concentration) · DEMOTE to presence-only pending re-curation (proof would not pin the sign)",
+      "proof_basis": "天孚是新易盛的共同供应商,向其供应隔离器、插芯、光纤阵列等无源光器件,关系真实;新易盛外购光器件芯片、TO-CAN、BOSA/ROSA/TOSA、IC芯片、PCB等,天孚的无源件只占其采购/成本一小部分,且模块瓶颈在激光芯片(EML/CW)与PCB而非天孚,故沿此供应商→客户边对新易盛盈利的传导弱、方向歧义。",
+      "proof_revenue_share_basis": "新易盛未披露对天孚的采购占比;无源光器件占其模块成本属低个位数,保守取低≈0.05(估计)",
+      "curated_revenue_share_basis": "seed-recovered (cited disclosure); value=0.25",
+      "sources": [
+        {
+          "url": "https://www.donews.com/article/detail/7331/99393.html",
+          "quote": "客户覆盖中际旭创、新易盛、华为、思科、谷歌、微软、亚马逊等全球头部玩家"
+        },
+        {
+          "url": "https://m.c114.com.cn/w5472-1299618.html",
+          "quote": "激光芯片和PCB都存在一定程度的短缺"
+        },
+        {
+          "url": "https://finance.sina.com.cn/stock/s/2025-08-26/doc-infnifvz8189198.shtml",
+          "quote": "天孚通信前五大客户销售占比已进一步提高至86.80%，第一大客户Fabrinet的销售额达20.06亿元，占年度销售总额的61.69%"
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "002371.SZ",
+      "target": "688981.SH",
+      "edge_type": "supplier",
+      "curated_sign": "+1",
+      "proof_sign": "±",
+      "curated_revenue_share": 0.25,
+      "proof_revenue_share": 0.15,
+      "curated_is_estimate": false,
+      "subject_check": "source_subject_suspect",
+      "divergence_kind": "definition_error_recurate_down",
+      "sign_verdict": "⚠ proof stays ± (curated +1) → reconsider / re-curate",
+      "revenue_share_verdict": "~ close (Δ0.10)",
+      "graph_action": "RE-CURATE revenue_share 0.25→0.15 (subject error: curated used source-concentration) · DEMOTE to presence-only pending re-curation (proof would not pin the sign)",
+      "proof_basis": "北方华创是中芯国际核心设备供应商、与其资本开支深度绑定(前五大客户合计27.88%、中芯为核心)，但设备属客户资本开支而非营业成本，景气沿此边传导到中芯盈利弱且歧义——国产设备缓解被制裁瓶颈利于扩产(+)，但放量增折旧、且无法覆盖先进制程节点(净向不明)。",
+      "proof_revenue_share_basis": "北方华创2024年前五大客户合计27.88%、中芯国际为其最大/核心客户，估计约占其营收15%(估计)",
+      "curated_revenue_share_basis": "seed-recovered (cited disclosure); value=0.25",
+      "sources": [
+        {
+          "url": "https://caifuhao.eastmoney.com/news/20251105181219346392380",
+          "quote": "「前五大客户占比27.88%，相对比较分散」「客户群体以中芯国际、长江存储、华虹集团等国内主流晶圆厂为核心」「公司与国内少数几家晶圆厂（如中芯国际、长鑫存储、长江存储）的资本开支计划深度绑定」"
+        },
+        {
+          "url": "https://www.esmchina.com/marketnews/53243.html",
+          "quote": ""
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "002371.SZ",
+      "target": "600584.SH",
+      "edge_type": "supplier",
+      "curated_sign": "+1",
+      "proof_sign": "±",
+      "curated_revenue_share": 0.05,
+      "proof_revenue_share": 0.03,
+      "curated_is_estimate": true,
+      "subject_check": "target_exposure",
+      "divergence_kind": "ok",
+      "sign_verdict": "⚠ proof stays ± (curated +1) → reconsider / re-curate",
+      "revenue_share_verdict": "≈ corroborated (Δ0.02)",
+      "graph_action": "DEMOTE to presence-only pending re-curation (proof would not pin the sign)",
+      "proof_basis": "北方华创为先进封装(Flip chip Bumping/Fan-Out/WLCSP/2.5D-3D TSV)提供刻蚀/沉积/炉管等设备并已在主流封测企业批量生产，长电为国内封测龙头大概率在列但无点名披露；即便成立，设备为客户资本开支、传导到长电盈利极弱，故净向歧义。",
+      "proof_revenue_share_basis": "长电未在北方华创前五大客户(合计27.88%、以晶圆厂为核心)之列，先进封装设备为北方华创小占比业务，估计≤3%(估计)",
+      "curated_revenue_share_basis": "估计: supplier edge = 北方华创 equipment cost-share of 长电 advanced-packaging capex/COGS. Equipment is capex (non-recurring in COGS), 北方华创 is one of several equip suppliers, packaging is far less front-end-equip-intensive than a foundry, and seed ",
+      "sources": [
+        {
+          "url": "https://www.naura.com/product/details_83_1600.html",
+          "quote": "「针对Flip chip Bumping、Fan-Out、WLCSP、2.5D/3D TSV等技术，北方华创为客户量身打造的刻蚀设备、沉积设备、炉管设备等已经实现了在主流先进封装企业的批量生产」"
+        },
+        {
+          "url": "https://caifuhao.eastmoney.com/news/20251105181219346392380",
+          "quote": "「客户群体以中芯国际、长江存储、华虹集团等国内主流晶圆厂为核心」"
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "AAPL",
+      "target": "002241.SZ",
+      "edge_type": "customer",
+      "curated_sign": "+1",
+      "proof_sign": "+1",
+      "curated_revenue_share": 0.4,
+      "proof_revenue_share": 0.32,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "ok",
+      "sign_verdict": "✓ agree (+1) → keep",
+      "revenue_share_verdict": "~ close (Δ0.08)",
+      "graph_action": "KEEP (corroborated) — no change",
+      "proof_basis": "苹果系歌尔长期第一/前二大客户(2021年报披露苹果占营收42.49%、2024年第一大客户占31.96%、第二大28.10%),为AirPods等声学器件与SiP/整机代工核心供应商,苹果采购↑直接放量拉动营收故+1(但客户集中度高、2022曾遭AirPods Pro砍单,存下行风险)。",
+      "proof_revenue_share_basis": "2024年第一大客户(普遍认为为苹果)占销售31.96%;2021年报苹果占42.49%、前五大占86.54%(年报披露,2024年报未点名客户故含估计成分)",
+      "curated_revenue_share_basis": "seed-recovered (cited disclosure); value=0.4",
+      "sources": [
+        {
+          "url": "https://finance.sina.com.cn/stock/s/2025-04-03/doc-inerwrzr1503703.shtml",
+          "quote": "以2021年的为例，公司前五大客户的贡献占总营收的比重为86.54%，其中，苹果作为公司第一大客户，营收占比高达42.49%；2024年，公司前五名客户合计销售金额为894.1亿元，占年度销售总额比例为88.57%"
+        },
+        {
+          "url": "https://www.52audio.com/archives/233056.html",
+          "quote": ""
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "AAPL",
+      "target": "002384.SZ",
+      "edge_type": "customer",
+      "curated_sign": "+1",
+      "proof_sign": "+1",
+      "curated_revenue_share": 0.35,
+      "proof_revenue_share": 0.5,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "ok",
+      "sign_verdict": "✓ agree (+1) → keep",
+      "revenue_share_verdict": "~ close (Δ0.15)",
+      "graph_action": "KEEP (corroborated) — no change",
+      "proof_basis": "苹果为东山精密第一大客户,2023年贡献187.81亿元、占营收55.81%,2024年前三季度约50.4%,公司是苹果FPC/PCB(软板/硬板)核心供应商,苹果终端及AI相关需求↑直接放量,故+1(占比过半,深度绑定)。",
+      "proof_revenue_share_basis": "2023年第一大客户(苹果)占营收55.81%(年报/媒体披露);2024年前三季度约50.4%(研报估计)",
+      "curated_revenue_share_basis": "seed-recovered (cited disclosure); value=0.35",
+      "sources": [
+        {
+          "url": "https://finance.sina.com.cn/stock/relnews/cn/2024-12-18/doc-inczwpwv7782938.shtml",
+          "quote": "2023年，销售额继续攀升至187.81亿元，占比也升至55.81%"
+        },
+        {
+          "url": "https://www.jiuyangongshe.com/a/83h5nav4n6",
+          "quote": ""
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "AAPL",
+      "target": "002475.SZ",
+      "edge_type": "customer",
+      "curated_sign": "+1",
+      "proof_sign": "+1",
+      "curated_revenue_share": 0.75,
+      "proof_revenue_share": 0.71,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "ok",
+      "sign_verdict": "✓ agree (+1) → keep",
+      "revenue_share_verdict": "≈ corroborated (Δ0.04)",
+      "graph_action": "KEEP (corroborated) — no change",
+      "proof_basis": "苹果为立讯精密最大客户,2024年占总营收70.7%(2022/2023年分别为73.3%/75.2%),为AirPods/Apple Watch/iPhone整机组装及连接器核心供应商,苹果采购↑强力拉动营收,故+1(超七成单一客户依赖,集中度极高)。",
+      "proof_revenue_share_basis": "港股招股书披露2024年来自最大客户(普遍认为苹果)收入占总营收70.7%",
+      "curated_revenue_share_basis": "seed-recovered (cited disclosure); value=0.75",
+      "sources": [
+        {
+          "url": "https://m.mp.oeeee.com/a/BAAFRD0000202508191113557.html",
+          "quote": "2022年、2023年及2024年，立讯精密来自最大客户的收入分别占同期总收入的73.3%、75.2%和70.7%"
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "AAPL",
+      "target": "601138.SH",
+      "edge_type": "customer",
+      "curated_sign": "+1",
+      "proof_sign": "+1",
+      "curated_revenue_share": 0.15,
+      "proof_revenue_share": 0.12,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "ok",
+      "sign_verdict": "✓ agree (+1) → keep",
+      "revenue_share_verdict": "≈ corroborated (Δ0.03)",
+      "graph_action": "KEEP (corroborated) — no change",
+      "proof_basis": "苹果为工业富联客户,公司向其供应手机精密结构件/连接器,但该消费电子业务已被AI服务器(英伟达/北美云厂)主业稀释——苹果占比未单独披露(前五大客户合计>62%,媒体/券商估苹果约10-15%),苹果需求↑仅温和拉动,故+1但暴露偏弱。",
+      "proof_revenue_share_basis": "苹果对工业富联占比未单独披露;前五大客户合计超62%;媒体/券商估计苹果约10-15%(估计)",
+      "curated_revenue_share_basis": "seed-recovered (cited disclosure); value=0.15",
+      "sources": [
+        {
+          "url": "https://caifuhao.eastmoney.com/news/20260505222356899442940",
+          "quote": "前五大客户贡献了超过62%的销售额；苹果(Apple)：营收占比约10%-15%(约900-1350亿)。主要供应结构件，AI基础设施服务器是其独家主力代工厂"
+        },
+        {
+          "url": "https://m.21jingji.com/article/20250812/df53e2a435d152f8a6e681ffa8b37014.html",
+          "quote": ""
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "TSM",
+      "target": "002916.SZ",
+      "edge_type": "capex_driver",
+      "curated_sign": "+1",
+      "proof_sign": "±",
+      "curated_revenue_share": 0.05,
+      "proof_revenue_share": null,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "no_fresh",
+      "sign_verdict": "⚠ proof stays ± (curated +1) → reconsider / re-curate",
+      "revenue_share_verdict": "? no fresh estimate",
+      "graph_action": "DEMOTE to presence-only pending re-curation (proof would not pin the sign)",
+      "proof_basis": "台积电capex主要流向制程设备(ASML/AMAT/Lam等)与CoWoS产能，其CoWoS封装基板由欣兴/Ibiden/Shinko/南亚/AT&S五家寡头供应、不含深南；深南董秘明确\"封装基板生产制造不涉下游先进封装环节\"且无任何向台积电供货披露，深南基板客户为日月光、长电等封测厂(OSAT)而非台积电，故与台积电capex无直接订单边，仅存\"CoWoS扩产→高端FCBGA/ABF需求\"的主题间接关联、且其20层以上FCBGA尚在研发，沿此边传导无法证实→净向歧义。",
+      "proof_revenue_share_basis": "无任何向台积电直接供货的披露，深南封装基板客户为日月光/长电等OSAT及苹果/三星终端(MEMS麦克风基板)，对台积电的营收暴露≈0/无法估计；台积电CoWoS基板由欣兴/Ibiden/Shinko/南亚/AT&S五寡头供应，深南不在其中。",
+      "curated_revenue_share_basis": "seed-recovered (cited disclosure); value=0.05",
+      "sources": [
+        {
+          "url": "https://finance.sina.com.cn/stock/relnews/dongmiqa/2024-09-11/doc-incnusvq4009427.shtml",
+          "quote": "「题述CoWos技术属于先进封装技术，应用于芯片封装。公司封装基板的生产制造不涉下游先进封装环节。」"
+        },
+        {
+          "url": "https://www.asiae.co.kr/en/article/2026043014033228020",
+          "quote": ""
+        },
+        {
+          "url": "https://nextfinancial.substack.com/p/the-msg-monopoly-how-a-japanese-food-company-owns-98",
+          "quote": ""
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "NVDA",
+      "target": "300394.SZ",
+      "edge_type": "customer",
+      "curated_sign": "+1",
+      "proof_sign": "+1",
+      "curated_revenue_share": 0.25,
+      "proof_revenue_share": 0.5,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "real_refresh_bitemporal",
+      "sign_verdict": "✓ agree (+1) → keep",
+      "revenue_share_verdict": "⚠ DIVERGE (Δ0.25)",
+      "graph_action": "REVISIT revenue_share 0.25→~0.5",
+      "proof_basis": "天孚通信经Mellanox(英伟达子公司)方案+Fabrinet(英伟达光模块代工厂)间接供1.6T硅光引擎/FAU，英伟达不直接具名下单；第一大客户Fabrinet 2024占营收61.69%(20.06亿)、前五大86.80%，几乎全服务英伟达需求，AI capex上行直接拉动放量，2024营收+67.74%/归母净利+84.07%，属高Beta的需求驱动正向边。",
+      "proof_revenue_share_basis": "第一大客户Fabrinet(英伟达光模块代工厂)2024占61.69%；扣非英伟达订单后归因英伟达需求约0.45-0.65，取中0.50(估计，英伟达年报匿名为\"客户A\"未具名)",
+      "curated_revenue_share_basis": "seed-recovered (cited disclosure); value=0.25",
+      "sources": [
+        {
+          "url": "https://www.tmtpost.com/7965961.html",
+          "quote": "英伟达虽然不直接向天孚下单，但通过指定Fabrinet采购天孚的1.6T光引擎来间接锁定；天孚通信为英伟达CPO交换机提供光纤阵列单元（FAU）"
+        },
+        {
+          "url": "https://c.m.163.com/news/a/KRA161T205118O92.html",
+          "quote": "这个\"客户A\"是Fabrinet，一家为英伟达提供光模块代工服务的泰国制造企业。英伟达在招股书中并未以直接客户身份出现，而是通过代工企业Fabrinet形成实质性绑定"
+        },
+        {
+          "url": "https://www.donews.com/news/detail/4/6002354.html",
+          "quote": "前五大客户销售占比已进一步提高至86.80%。其中，第一大客户Fabrinet的销售额达20.06亿元，占年度销售总额的61.69%"
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "NVDA",
+      "target": "300502.SZ",
+      "edge_type": "customer",
+      "curated_sign": "+1",
+      "proof_sign": "+1",
+      "curated_revenue_share": 0.22,
+      "proof_revenue_share": 0.15,
+      "curated_is_estimate": true,
+      "subject_check": "target_exposure",
+      "divergence_kind": "ok",
+      "sign_verdict": "✓ agree (+1) → keep",
+      "revenue_share_verdict": "≈ corroborated (Δ0.07)",
+      "graph_action": "KEEP (corroborated) — no change",
+      "proof_basis": "新易盛800G/1.6T已通过英伟达GB200平台认证、随NVL机柜配套间接进入英伟达供应链(英伟达2026年800G追加订单中新易盛份额测算约25%)，但财报营收主体为北美云厂直供(2024海外占78.7%、亚马逊/Meta)，英伟达未具名，故为中等偏弱的需求驱动正向边。",
+      "proof_revenue_share_basis": "2024海外占比78.7%主体为云厂直供，英伟达800G采购份额测算约25%、1.6T供应链测算>30%，反推对英伟达直接暴露约0.10-0.20，取0.15(估计，年报客户匿名未点名英伟达)",
+      "curated_revenue_share_basis": "STRATEGIST-CORRECTED 0.35->0.22: OVERSTATED. 新易盛 2025 disclosures: AWS+MSFT+Meta >50% COMBINED with AWS the #1 customer; 字节 = top domestic; overseas 94.47%. Nvidia is ~30% of NVIDIA'S supply ch",
+      "sources": [
+        {
+          "url": "https://fiber.ofweek.com/2025-09/ART-210001-8420-30671297.html",
+          "quote": "通过与云厂商合作，能够间接渗透至英伟达供应链，而非直供英伟达。"
+        },
+        {
+          "url": "https://caifuhao.eastmoney.com/news/20251029131558772016760",
+          "quote": "新易盛800G和1.6t也通过认证"
+        },
+        {
+          "url": "https://www.nbd.com.cn/articles/2025-08-26/4031158.html",
+          "quote": "据公司2024年年报，去年新易盛的海外营收占比为78.7%；主要客户涵盖北美、欧洲及东南亚地区的大型云服务商与通信设备商"
+        },
+        {
+          "url": "https://pro.huxiu.com/article/1966619.html",
+          "quote": "新易盛已经是亚马逊、META的供应商"
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "NVDA",
+      "target": "300769.SZ",
+      "edge_type": "customer",
+      "curated_sign": "+1",
+      "proof_sign": "±",
+      "curated_revenue_share": 0.15,
+      "proof_revenue_share": 0,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "ok",
+      "sign_verdict": "⚠ proof stays ± (curated +1) → reconsider / re-curate",
+      "revenue_share_verdict": "~ close (Δ0.15)",
+      "graph_action": "DEMOTE to presence-only pending re-curation (proof would not pin the sign)",
+      "proof_basis": "300769.SZ为德方纳米，主营纳米磷酸铁锂/磷酸锰铁锂/补锂剂等锂电池正极材料(下游为宁德时代等锂电厂)，与英伟达AI算力/半导体/服务器/光模块/先进封装供应链物理上无任何交集，该customer边不成立、无传导，判净向歧义并建议删除此边。",
+      "proof_revenue_share_basis": "锂电正极材料企业，与英伟达无任何供货关系，对英伟达营收暴露为0",
+      "curated_revenue_share_basis": "seed-recovered (cited disclosure); value=0.15",
+      "sources": [
+        {
+          "url": "https://finance.sina.com.cn/stock/bxjj/2025-01-02/doc-inecqhfz5693246.shtml",
+          "quote": "公司的主营业务为锂离子电池材料的研发、生产和销售，产品应用于新能源汽车动力电池和储能电池等领域。"
+        },
+        {
+          "url": "https://stockanalysis.com/quote/she/300769/",
+          "quote": "engages in the research and development, production, and sale of materials for lithium-ion batteries in China"
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "NVDA",
+      "target": "601138.SH",
+      "edge_type": "customer",
+      "curated_sign": "+1",
+      "proof_sign": "+1",
+      "curated_revenue_share": 0.2,
+      "proof_revenue_share": 0.22,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "ok",
+      "sign_verdict": "✓ agree (+1) → keep",
+      "revenue_share_verdict": "≈ corroborated (Δ0.02)",
+      "graph_action": "KEEP (corroborated) — no change",
+      "proof_basis": "工业富联是英伟达HGX/DGX独家ODM及GB200/GB300 NVL72整机柜核心代工厂(GB200 NVL72全球产能份额约43%-52%、领先广达22%/纬创20%，液冷配套独占>50%)，并独家供应英伟达芯片基板，英伟达需求/排产直接拉动其AI服务器营收(2024 AI服务器增超150%、占云计算业务四成)，强正向边。",
+      "proof_revenue_share_basis": "AI服务器约占总营收21-23%且几乎全基于英伟达GPU/参考设计；前五大客户合计65.19%但未单列英伟达，取0.20-0.25中值0.22(估计，直接付款方多为云厂、属对英伟达生态暴露)",
+      "curated_revenue_share_basis": "seed-recovered (cited disclosure); value=0.2",
+      "sources": [
+        {
+          "url": "https://caifuhao.eastmoney.com/news/20250703150732662982010",
+          "quote": "工业富联是英伟达AI服务器的核心ODM供应商，覆盖从GPU模组、基板到整机组装的全链条服务；2025年英伟达GB200系列服务器中，工业富联预计供应70%的DGX系统和20%的MGX系统"
+        },
+        {
+          "url": "https://finance.sina.com.cn/jjxw/2025-07-09/doc-infewqmq1223774.shtml",
+          "quote": "在2024年，公司前五大客户的营收占比高达65.19%。AI服务器营业收入同比增长超过60%，云服务商服务器营业收入同比增长超过1.5倍。"
+        },
+        {
+          "url": "https://finance.sina.com.cn/roll/2025-05-11/doc-inewfmir1921656.shtml",
+          "quote": "2024年云计算业务收入3193.77亿元（YoY 64.37%），占比52.5%；2024年AI服务器营收同比增幅超150%，占云计算业务营收比例突破四成"
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "NVDA",
+      "target": "000977.SZ",
+      "edge_type": "customer",
+      "curated_sign": "+1",
+      "proof_sign": "±",
+      "curated_revenue_share": 0.25,
+      "proof_revenue_share": 0.3,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "ok",
+      "sign_verdict": "⚠ proof stays ± (curated +1) → reconsider / re-curate",
+      "revenue_share_verdict": "≈ corroborated (Δ0.05)",
+      "graph_action": "DEMOTE to presence-only pending re-curation (proof would not pin the sign)",
+      "proof_basis": "该边方向实为浪潮向NVDA采购GPU(NVDA是供应商而非客户);2023年3月浪潮集团入美实体清单后高端GPU断供,2023H1营收同比-28.85%、净利同比-65.91%,公司归因\"英伟达等供应商限制GPU出口\";正常情形NVDA供给+利好(+1),但管制下断供主导转利空(-1),且原边方向标反,故净向歧义记±。",
+      "proof_revenue_share_basis": "无对NVDA这条边的确切营收暴露披露;以AI服务器约占浪潮服务器收入36%(第三方估算)且高度依赖NVDA GPU为锚取保守高档≈0.30(估计);NVDA 2019年为第二大供应商占采购额近8%可作下限参考",
+      "curated_revenue_share_basis": "seed-recovered 0.25; CAVEAT H20 export-control two-sided/high-volatility (2025 ban->relief->re-tighten) — concentration unstable",
+      "sources": [
+        {
+          "url": "https://finance.yahoo.com/news/tech-war-chinas-top-ai-093000542.html",
+          "quote": "\"Inspur was finally added to the US Commerce Department's Entity List this March\"; \"Nvidia was ranked No. 2 among its top five suppliers, accounting for nearly 8 per cent of its purchasing budget that year.\""
+        },
+        {
+          "url": "https://www.stcn.com/article/detail/1007312.html",
+          "quote": "\"浪潮信息正是英伟达在国内最大的分销商之一。\"；\"浪潮信息上半年业绩下降28.85%，正是受全球GPU及相关专用芯片供应紧张等因素的影响。\""
+        },
+        {
+          "url": "https://www.jiemian.com/article/11110240.html",
+          "quote": "\"2023年上半年，由于英伟达等供应商限制了GPU及相关专用芯片出口，导致公司服务器出货量减少。\"；\"2023年3月，美国以国家安全为由，限制美国企业向浪潮集团出口产品。\""
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "NVDA",
+      "target": "002463.SZ",
+      "edge_type": "customer",
+      "curated_sign": "+1",
+      "proof_sign": "+1",
+      "curated_revenue_share": 0.4,
+      "proof_revenue_share": 0.15,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "real_refresh_bitemporal",
+      "sign_verdict": "✓ agree (+1) → keep",
+      "revenue_share_verdict": "⚠ DIVERGE (Δ0.25)",
+      "graph_action": "REVISIT revenue_share 0.4→~0.15",
+      "proof_basis": "沪电是AI服务器/数据中心高端PCB核心厂商,经鸿海/广达/纬创等ODM间接进入NVDA(GB200/GB300/HGX)供应链(券商称北美份额超80%、全球AI服务器PCB约40%);2024年企业通讯板收入约100.93亿(占总收入75.65%、同比+71.94%),AI服务器+HPC相关PCB约占该板块29.48%,GB300单机PCB价值较GB200提升30%-50%,量价齐升随NVDA capex正相关。",
+      "proof_revenue_share_basis": "估计(中)。公司以\"商业政策限制\"拒绝点名英伟达,无NVDA单一客户披露;锚定2024年企业通讯板占总收入75.65%×其中AI服务器+HPC占29.48%≈占公司总收入约22%(含全部AI/HPC客户非仅NVDA),故NVDA单边取中性≈0.15",
+      "curated_revenue_share_basis": "seed-recovered (cited disclosure); value=0.4",
+      "sources": [
+        {
+          "url": "https://finance.sina.com.cn/stock/relnews/cn/2025-07-07/doc-infeqytv6526491.shtml",
+          "quote": "\"2024年公司企业通讯市场板营业收入中(企业通讯市场板占整体收入75.65%),AI服务器和HPC相关PCB产品约占29.48%\""
+        },
+        {
+          "url": "https://finance.sina.com.cn/stock/relnews/cn/2025-06-30/doc-infcvpns4495904.shtml",
+          "quote": "\"出于商业政策的限制,我们不便讨论具体的厂商。公司产品的核心应用领域包括汽车电子、通信通讯设备以及AI服务器、高性能计算机、高速交换机等数据中心基础设施。\""
+        },
+        {
+          "url": "https://finance.sina.com.cn/roll/2025-06-18/doc-infanwwc5612666.shtml",
+          "quote": "\"GB300使用22层及以上高层板配5阶HDI,单机PCB价值较GB200提升约30%-50%\""
+        },
+        {
+          "url": "https://www.abnotebook.com/a/23541",
+          "quote": "\"沪电股份为英伟达AI服务器PCB主供应商之一,北美市场份额超80%,GB300订单排至2026年Q2\""
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "NVDA",
+      "target": "002916.SZ",
+      "edge_type": "customer",
+      "curated_sign": "+1",
+      "proof_sign": "±",
+      "curated_revenue_share": 0.15,
+      "proof_revenue_share": null,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "no_fresh",
+      "sign_verdict": "⚠ proof stays ± (curated +1) → reconsider / re-curate",
+      "revenue_share_verdict": "? no fresh estimate",
+      "graph_action": "DEMOTE to presence-only pending re-curation (proof would not pin the sign)",
+      "proof_basis": "深南电路2024年数据中心成为第2个20亿元级订单市场、PCB产品覆盖\"AI加速卡\"且FC-BGA载板用于GPU逻辑芯片,方向上随NVDA capex受益;但公司2025年7月在投资者平台明确\"与英伟达暂不存在合作关系\"并否认相关传闻,直接边未被公司确认(甚至被否认),仅有国海证券笼统将其列入GB200主板候选名单,故净向歧义记±。",
+      "proof_revenue_share_basis": "公司从未披露NVDA单一客户收入且2025-07否认与英伟达合作;券商仅笼统列入GB200主板候选名单无专属订单/价值量,无法据公开披露给出可靠暴露占比,填null(若强估因公司否认倾向低≈0.05以下)",
+      "curated_revenue_share_basis": "seed-recovered (cited disclosure); value=0.15",
+      "sources": [
+        {
+          "url": "https://c.m.163.com/news/a/K3SS16D20519QIKK.html",
+          "quote": "投资者问\"请问贵公司有进入英伟达产业供应链吗？\"，公司回复\"公司目前与题述厂商暂不存在合作关系。\""
+        },
+        {
+          "url": "https://finance.sina.com.cn/stock/relnews/dongmiqa/2025-07-21/doc-infhfrrm3204783.shtml",
+          "quote": "问德福铜箔\"已通过深南电路的验证并在英伟达项目中实现应用，是真的吗\"，董秘答\"公司不存在上述情形。\""
+        },
+        {
+          "url": "https://finance.sina.com.cn/stock/relnews/us/2024-10-21/doc-incthwvt5523604.shtml",
+          "quote": "(国海证券NVIDIA GB200研报)\"②主板：沪电股份、深南电路、胜宏科技、技嘉、华擎\"——仅笼统列入名单"
+        },
+        {
+          "url": "https://m.c114.com.cn/w5472-1285279.html",
+          "quote": "\"数据中心业务在2024年跃为公司业务第二增长引擎，超20亿元订单规模\""
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "NVDA",
+      "target": "300308.SZ",
+      "edge_type": "customer",
+      "curated_sign": "+1",
+      "proof_sign": "+1",
+      "curated_revenue_share": 0.25,
+      "proof_revenue_share": 0.15,
+      "curated_is_estimate": true,
+      "subject_check": "target_exposure",
+      "divergence_kind": "ok",
+      "sign_verdict": "✓ agree (+1) → keep",
+      "revenue_share_verdict": "~ close (Δ0.10)",
+      "graph_action": "KEEP (corroborated) — no change",
+      "proof_basis": "中际旭创是英伟达800G/1.6T光模块核心/一供(NVDA直接采购,经工业富联集成进GB200/GB300服务器),NVDA AI网络capex与光模块采购上行时旭创量价齐升;800G出货2025年同比近翻倍,量增盖过单价约15%/年降幅,公司称\"无砍单、需求旺盛\",故NVDA需求↑→旭创盈利↑。",
+      "proof_revenue_share_basis": "估计(非官方披露)。年报仅按排名披露前五大客户合计占营收74.74%、前三大占62.5%未点名;谷歌为第一大客户,英伟达为另一头部(前三/前五)客户但份额低于谷歌,故NVDA单边取中性偏保守≈0.15",
+      "curated_revenue_share_basis": "STRATEGIST-CORRECTED 0.45->0.25: OVERSTATED. 旭创 2025 年报 discloses top-1 customer = 24.06% (top-5 = 75.98%); Google procures >half of 800G product; Nvidia is largest by VOLUME (80% of 1.6T order",
+      "sources": [
+        {
+          "url": "https://m.chinaventure.com.cn/news/78-20251203-389151.html",
+          "quote": "\"公司的前五大客户合计贡献销售额178.36亿元,占公司总营收的74.74%,其中前三大客户的销售额占比便高达62.5%\";\"中际旭创是谷歌的第一大光模块供应商\""
+        },
+        {
+          "url": "https://news.qq.com/rain/a/20260320A07NNL00",
+          "quote": "\"作为800G光模块的独家供应商,中际旭创深度绑定英伟达的每一代GPU迭代\";\"公司不仅是供应商,更与英伟达共建了'AI算力网络实验室'\""
+        },
+        {
+          "url": "https://www.fxbaogao.com/detail/3804819",
+          "quote": "\"光模块:中际旭创:谷歌、英伟达一供。800G批量出货。\""
+        },
+        {
+          "url": "https://www.hstong.com/news/detail/25111909313034172",
+          "quote": "中际旭创光模块由英伟达直接采购,再通过工业富联集成到英伟达GB200/GB300 AI服务器中;英伟达1.6T光模块订单旭创锁定约80%"
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "002129.SZ",
+      "target": "603986.SH",
+      "edge_type": "supplier",
+      "curated_sign": "+1",
+      "proof_sign": "±",
+      "curated_revenue_share": 0.05,
+      "proof_revenue_share": null,
+      "curated_is_estimate": true,
+      "subject_check": "target_exposure",
+      "divergence_kind": "no_fresh",
+      "sign_verdict": "⚠ proof stays ± (curated +1) → reconsider / re-curate",
+      "revenue_share_verdict": "? no fresh estimate",
+      "graph_action": "DEMOTE to presence-only pending re-curation (proof would not pin the sign)",
+      "proof_basis": "兆易创新为纯Fabless设计公司,向中芯国际等晶圆代工厂采购\"代工服务\"(2013-15年对中芯+武汉新芯采购占比合计66%-73%,2022年前两大供应商仍占48%)而非采购衬底硅片;TCL中环作为硅片衬底厂商对其无直接供货关系(至多为隔层上游),此边实质不成立,故净向歧义。",
+      "proof_revenue_share_basis": "兆易创新Fabless模式无自有晶圆厂、不直接采购衬底硅片,对TCL中环无直接成本暴露,无法量化(估计≈0)",
+      "curated_revenue_share_basis": "估计: supplier edge = TCL中环 硅片 cost-share of 兆易 COGS. 兆易 is largely fabless (NOR/MCU design; DRAM via Hefei JV); blank silicon wafer is a small, indirect BOM line and seed marks this hop_class=2 ('TCL中环 wafer → 兆易 DRAM (Hefei) input'). No dis",
+      "sources": [
+        {
+          "url": "https://m.gelonghui.com/p/156311",
+          "quote": "「另一种是兆易创新采用的\"纯Fabless设计+FAB代工\"模式，即自身不建设晶圆厂，只做芯片设计，芯片制造采用委外加工方式由下游FAB厂商（如中芯国际等）进行」"
+        },
+        {
+          "url": "https://m.gelonghui.com/p/156311",
+          "quote": "「今年9月初公司已与中芯国际签署12亿元的12寸晶圆采购意向协议」"
+        },
+        {
+          "url": "https://zhuanlan.zhihu.com/p/669390015",
+          "quote": ""
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "002129.SZ",
+      "target": "688981.SH",
+      "edge_type": "supplier",
+      "curated_sign": "+1",
+      "proof_sign": "±",
+      "curated_revenue_share": 0.05,
+      "proof_revenue_share": 0.05,
+      "curated_is_estimate": true,
+      "subject_check": "target_exposure",
+      "divergence_kind": "ok",
+      "sign_verdict": "⚠ proof stays ± (curated +1) → reconsider / re-curate",
+      "revenue_share_verdict": "≈ corroborated (Δ0.00)",
+      "graph_action": "DEMOTE to presence-only pending re-curation (proof would not pin the sign)",
+      "proof_basis": "TCL中环(中环领先)是国产8英寸规模最大、12英寸≥28nm已量产供货的半导体硅片厂商,中芯国际作为国内最大晶圆代工厂是其下游潜在客户(行业资料称中环8英寸及以下硅片已通过中芯等认证批量供货,但无确切份额披露);硅片仅占代工厂成本极小且多源采购(沪硅/上海超硅/进口SUMCO·信越),传导弱:国产硅片放量保障供应链安全为利好、硅片涨价则成本端利空,净向歧义。",
+      "proof_revenue_share_basis": "硅片为晶圆代工厂少量且多源的成本项,中环仅为其供应商之一,估计对中芯成本暴露≈5%(估计,无确切披露)",
+      "curated_revenue_share_basis": "估计: supplier edge = TCL中环 12-inch wafer cost-share of 中芯 foundry COGS. Foundry COGS is dominated by equipment depreciation/labor, not the blank wafer (typically low single-digit %). Live slice confirms TCL中环 is 'in' 中芯's supply chain (已进入英特",
+      "sources": [
+        {
+          "url": "https://news.qq.com/rain/a/20221230A07FNH00",
+          "quote": "「根据中环股份年报，截至2021年底，12英寸半导体硅片产能为17万片/月，至2022年底预计产能约30万-35万片/月。」"
+        },
+        {
+          "url": "https://zhuanlan.zhihu.com/p/567175071",
+          "quote": ""
+        },
+        {
+          "url": "https://m.solarbe.com/21-0-322744-1.html",
+          "quote": ""
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "002916.SZ",
+      "target": "603019.SH",
+      "edge_type": "supplier",
+      "curated_sign": "+1",
+      "proof_sign": "±",
+      "curated_revenue_share": 0.05,
+      "proof_revenue_share": 0.03,
+      "curated_is_estimate": true,
+      "subject_check": "target_exposure",
+      "divergence_kind": "ok",
+      "sign_verdict": "⚠ proof stays ± (curated +1) → reconsider / re-curate",
+      "revenue_share_verdict": "≈ corroborated (Δ0.02)",
+      "graph_action": "DEMOTE to presence-only pending re-curation (proof would not pin the sign)",
+      "proof_basis": "深南为AI服务器PCB主力厂商、中科曙光为国产服务器厂商，二者供货关系仅属产业链推断（双方均未披露此具体关系），且PCB约占服务器BOM个位数%、深南为多家可替代供应商之一，对中科曙光成本/盈利传导极弱，景气变化方向不定故净向歧义。",
+      "proof_revenue_share_basis": "无任何披露确认深南为中科曙光供应商；PCB约占服务器BOM 3-5%且深南仅为沪电/广合/景旺等多家供应商之一，故深南占中科曙光成本暴露极低（估计，低档≈0.05下调）",
+      "curated_revenue_share_basis": "估计/estimate (low bucket 0.05): 深南 IC substrate → 中科曙光 domestic AI server via 海光 packaging path (seed note 'revenue_share: null', hop_class=1 but substrate is a chip-level packaging input). Substrate is a smaller server-COGS line than full-b",
+      "sources": [
+        {
+          "url": "https://caifuhao.eastmoney.com/news/20260305213317964394380",
+          "quote": "「华为昇腾、中兴等国产算力龙头的核心供应商」「AMD、谷歌、Meta、英伟达的全球供应链，是 AMD 的核心 PCB 供应商」（深南披露客户中未含中科曙光）"
+        },
+        {
+          "url": "https://www.sohu.com/a/1021814202_122014422",
+          "quote": ""
+        },
+        {
+          "url": "https://xueqiu.com/6347482150/245619690",
+          "quote": "「AI服务器PCB供应商：T0 沪电股份，T1 深南电路、生益科技」（行业梯队，未点名中科曙光供货）"
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "002463.SZ",
+      "target": "000977.SZ",
+      "edge_type": "supplier",
+      "curated_sign": "+1",
+      "proof_sign": "±",
+      "curated_revenue_share": 0.15,
+      "proof_revenue_share": 0.02,
+      "curated_is_estimate": true,
+      "subject_check": "target_exposure",
+      "divergence_kind": "ok",
+      "sign_verdict": "⚠ proof stays ± (curated +1) → reconsider / re-curate",
+      "revenue_share_verdict": "~ close (Δ0.13)",
+      "graph_action": "DEMOTE to presence-only pending re-curation (proof would not pin the sign)",
+      "proof_basis": "浪潮服务器PCB长期主力供应商为广合科技(2016-2022连续7年获浪潮\"年度优秀供应商奖\")，沪电股份仅被列为广合在服务器PCB领域的竞争对手，并非已证实的浪潮供应商；且沪电>80%营收来自海外、浪潮为内资且未出现在其GB200供应链名单中，此供货边未获证实、暴露极低，故净向歧义。",
+      "proof_revenue_share_basis": "沪电2024年报未披露客户名单(前五大客户合计占50.9%但匿名)、2024境外收入占比83.2%；浪潮订单主要由广合等承接，浪潮至多为沪电边缘内资客户，估计暴露极低(估计)",
+      "curated_revenue_share_basis": "估计/estimate (med bucket 0.15): 沪电 high-multi-layer PCB → 浪潮 AI server BOM (seed note 'revenue_share: null'). Live-slice: AI机柜 PCB 层数升至40层以上(正交背板70层+), 单机PCB价值量大幅提升 → PCB is a substantial BOM line comparable to optical. No primary server-COG",
+      "sources": [
+        {
+          "url": "https://finance.sina.com.cn/roll/2024-09-14/doc-incpanuw1861113.shtml",
+          "quote": "「2016年到2022年连续获得中国服务器市场占有率第一的浪潮颁发的'年度优秀供应商奖'」；「从事服务器PCB生产的厂商主要有广合科技、健鼎科技、金像电子、深南电路、沪电股份、生益科技、胜宏科技」"
+        },
+        {
+          "url": "https://cj.sina.com.cn/articles/view/2587691232/9a3d08e002001kg68",
+          "quote": "「公司境外收入占比分别为75.5%、80.7%、83.2%及81.1%，整体升高。」「前五大客户收入占比达51.2%」"
+        },
+        {
+          "url": "https://finance.sina.com.cn/stock/relnews/dongmiqa/2025-03-31/doc-inerpywq1064382.shtml",
+          "quote": "「公司根据相关规定履行信息披露义务，受商业政策限制，我们的不便讨论具体的公司」"
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "002463.SZ",
+      "target": "601138.SH",
+      "edge_type": "supplier",
+      "curated_sign": "+1",
+      "proof_sign": "±",
+      "curated_revenue_share": 0.15,
+      "proof_revenue_share": 0.1,
+      "curated_is_estimate": true,
+      "subject_check": "target_exposure",
+      "divergence_kind": "ok",
+      "sign_verdict": "⚠ proof stays ± (curated +1) → reconsider / re-curate",
+      "revenue_share_verdict": "≈ corroborated (Δ0.05)",
+      "graph_action": "DEMOTE to presence-only pending re-curation (proof would not pin the sign)",
+      "proof_basis": "沪电为英伟达GB200核心PCB供应商、工业富联为GB200服务器代工厂，沪电高端服务器PCB随整机进入富联组装、同属AI算力链(GB200量产期富联与PCB链同步跟涨)；但沪电未披露客户名单、PCB仅占AI服务器BOM个位数且为成本端、富联PCB供应商不止沪电一家，供货非富联关键瓶颈/主要成本，传导弱故净向歧义。",
+      "proof_revenue_share_basis": "沪电未披露客户名单(2024前五大客户占50.9%、境外占83.2%)；富联或为其重要数通/服务器客户但部分PCB或经英伟达基板链间接计费、且PCB占AI服务器BOM个位数，估计中低暴露约0.10(估计)",
+      "curated_revenue_share_basis": "估计/estimate (med bucket 0.15): 沪电 high-multi-layer PCB → 工业富联 GB200/GB300 AI server BOM (seed note 'revenue_share: null'). Live-slice: AI硬件迭代拉升PCB单机价值(M9/M10高速材料, 层数激增). PCB a large non-GPU BOM line; no primary cost-share disclosed → med bu",
+      "sources": [
+        {
+          "url": "https://finance.sina.com.cn/roll/2024-10-19/doc-inctakrx4459835.shtml",
+          "quote": "「沪电股份（供应服务器PCB）」(同文将工业富联列为GB200\"代工方/服务器代工\")"
+        },
+        {
+          "url": "https://caifuhao2.eastmoney.com/news/20251230101200661246320",
+          "quote": "「沪电股份作为英伟达 GB200 的核心供应商，与英伟达建立了紧密的合作关系，共同服务于全球主流云服务商。」"
+        },
+        {
+          "url": "https://finance.sina.com.cn/stock/relnews/dongmiqa/2025-03-31/doc-inerpywq1064382.shtml",
+          "quote": "「公司根据相关规定履行信息披露义务，受商业政策限制，我们的不便讨论具体的公司」"
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "002837.SZ",
+      "target": "000977.SZ",
+      "edge_type": "supplier",
+      "curated_sign": "+1",
+      "proof_sign": "±",
+      "curated_revenue_share": 0.05,
+      "proof_revenue_share": 0.05,
+      "curated_is_estimate": true,
+      "subject_check": "target_exposure",
+      "divergence_kind": "ok",
+      "sign_verdict": "⚠ proof stays ± (curated +1) → reconsider / re-curate",
+      "revenue_share_verdict": "≈ corroborated (Δ0.00)",
+      "graph_action": "DEMOTE to presence-only pending re-curation (proof would not pin the sign)",
+      "proof_basis": "英维克是温控/液冷部件供应商，产业链资料将浪潮列为其服务器客户、且2011年中国移动南方基地项目曾与浪潮信息合作开发定制液冷服务器，关系真实但弱；然券商深度仅把腾讯/阿里/字节/万国/秦淮列为主要数据中心客户而未列浪潮，另有报道称浪潮浸没液冷由高澜股份供应，说明供货量小、液冷仅占AI服务器BOM小头(GPU/HBM主导)、非浪潮盈利瓶颈，景气沿此边对浪潮盈利传导极弱故净向歧义。",
+      "proof_revenue_share_basis": "英维克客户集中度低(2022前五大约31%、2024营收45.89亿)，浪潮未被披露为主要客户，浪潮对英维克收入占比低(估计)",
+      "curated_revenue_share_basis": "估计/estimate (low bucket 0.05): 英维克 liquid cooling (Coolinside 冷板/CDU) → 浪潮 AI server thermal (seed note 'revenue_share: null'). Task heuristic: cooling is a SMALLER BOM line than optical/PCB; thermal solution is a single-digit % of total se",
+      "sources": [
+        {
+          "url": "https://finance.sina.com.cn/roll/2025-12-17/doc-inhcaqyr7358836.shtml",
+          "quote": "腾讯、阿里巴巴、百度、字节跳动、万国数据、秦淮数据"
+        },
+        {
+          "url": "https://www.sina.cn/news/detail/5280787663946660.html",
+          "quote": "客户覆盖腾讯、阿里等互联网巨头"
+        },
+        {
+          "url": "https://zhuanlan.zhihu.com/p/1924570662040768893",
+          "quote": ""
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "002837.SZ",
+      "target": "601138.SH",
+      "edge_type": "supplier",
+      "curated_sign": "+1",
+      "proof_sign": "±",
+      "curated_revenue_share": 0.05,
+      "proof_revenue_share": null,
+      "curated_is_estimate": true,
+      "subject_check": "target_exposure",
+      "divergence_kind": "no_fresh",
+      "sign_verdict": "⚠ proof stays ± (curated +1) → reconsider / re-curate",
+      "revenue_share_verdict": "? no fresh estimate",
+      "graph_action": "DEMOTE to presence-only pending re-curation (proof would not pin the sign)",
+      "proof_basis": "未找到英维克向工业富联直接供货的证据；工业富联全资子公司鸿佰科技自研GB200 NVL72液冷机柜、富士康FIT另规划自产冷板/歧管，二者在英伟达液冷链中更多是平行/竞争关系(鸿佰做整柜代工集成、英维克与Cooler Master合供快接头且CDU/冷板仍处送样阶段)，该供应关系未获证实，传导方向无法判定故歧义。",
+      "proof_revenue_share_basis": "无直接供货披露，工业富联液冷以鸿佰自研为主，无法估计工业富联对英维克的收入暴露占比",
+      "curated_revenue_share_basis": "估计/estimate (low bucket 0.05): 英维克 cold-plate/CDU/UQD liquid-cooling parts → 工业富联 (鸿佰/Ingrasys) GB200/GB300 server (seed note 'revenue_share: null'; live-slice confirms component supply). Cooling < optical/PCB BOM share; single-digit % of s",
+      "sources": [
+        {
+          "url": "https://news.qq.com/rain/a/20250907A06DUI00",
+          "quote": "Cooler Master 还联合英维克参与快插头供应"
+        },
+        {
+          "url": "https://finance.sina.com.cn/roll/2025-12-17/doc-inhcaqyr7358836.shtml",
+          "quote": "公司已进入英伟达GB200/300 NV72的供应商名录，CDU、UQD、冷板等产品已处在送样阶段"
+        },
+        {
+          "url": "https://panel.fii-foxconn.com/m/xwzx/223.html",
+          "quote": ""
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "300308.SZ",
+      "target": "000977.SZ",
+      "edge_type": "supplier",
+      "curated_sign": "+1",
+      "proof_sign": "±",
+      "curated_revenue_share": 0.15,
+      "proof_revenue_share": 0.03,
+      "curated_is_estimate": true,
+      "subject_check": "target_exposure",
+      "divergence_kind": "ok",
+      "sign_verdict": "⚠ proof stays ± (curated +1) → reconsider / re-curate",
+      "revenue_share_verdict": "~ close (Δ0.12)",
+      "graph_action": "DEMOTE to presence-only pending re-curation (proof would not pin the sign)",
+      "proof_basis": "中际旭创主供海外云厂(2024前五大客户占74.74%、海外营收>80%、谷歌/英伟达一供),浪潮未进其实质性客户名单;光模块仅占浪潮AI服务器BOM很小比例(GPU占大头),此供货边传导极弱,涨价为微弱成本端-1而放量与需求又同向,净向歧义→±。",
+      "proof_revenue_share_basis": "浪潮非中际旭创前五大客户(2024前五大合计74.74%、海外>80%),光模块在浪潮服务器成本中占比很小且供应商分散,暴露占比低(估计)",
+      "curated_revenue_share_basis": "估计/estimate (med bucket 0.15): 旭创 800G optical module → 浪潮 AI server NVLink/switch BOM (seed note 'revenue_share: null'; live-slice: optical is core data-center-network component). Optical is one of the LARGEST non-GPU BOM lines but GPU+HBM",
+      "sources": [
+        {
+          "url": "https://caifuhao.eastmoney.com/news/20250918070705498044170",
+          "quote": "浪潮信息作为服务器等数据中心设备的重要厂商，在构建数据中心网络时需要光模块产品，是中际旭创的客户。"
+        },
+        {
+          "url": "https://caifuhao.eastmoney.com/news/20250918070705498044170",
+          "quote": "中际旭创的100G模块是国内首家通过华为认证的产品"
+        },
+        {
+          "url": "https://finance.sina.com.cn/stock/relnews/dongmiqa/2024-12-22/doc-ineaiuqp3514287.shtml",
+          "quote": ""
+        },
+        {
+          "url": "https://www.fxbaogao.com/detail/3804819",
+          "quote": ""
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "300499.SZ",
+      "target": "603019.SH",
+      "edge_type": "supplier",
+      "curated_sign": "+1",
+      "proof_sign": "±",
+      "curated_revenue_share": 0.05,
+      "proof_revenue_share": 0.05,
+      "curated_is_estimate": true,
+      "subject_check": "target_exposure",
+      "divergence_kind": "ok",
+      "sign_verdict": "⚠ proof stays ± (curated +1) → reconsider / re-curate",
+      "revenue_share_verdict": "≈ corroborated (Δ0.00)",
+      "graph_action": "DEMOTE to presence-only pending re-curation (proof would not pin the sign)",
+      "proof_basis": "高澜与曙光主要为液冷标准联合开发/同业关系而非确证供货,直接供货仅见自媒体(2亿订单未经正式披露);曙光自有子公司曙光数创浸没式液冷份额58.8%自供散热并与高澜同台竞争,即便有供货也仅占曙光服务器BOM小头,弱传导且方向歧义。",
+      "proof_revenue_share_basis": "无年报披露曙光为高澜客户;高澜主业为高压直流输电热管理、数据中心液冷为新业务(参考客户为字节),曙光经曙光数创自供散热,故曙光占高澜收入极低(估计,且供货关系未经正式披露证实)",
+      "curated_revenue_share_basis": "估计/estimate (low bucket 0.05): 高澜 liquid cooling → 中科曙光 domestic AI server (seed note 'revenue_share: null'; live-slice: 预装/液冷方案合作). Cooling is a small BOM line per task heuristic (< optical/PCB); 高澜 is a secondary cooling vendor. Conservat",
+      "sources": [
+        {
+          "url": "https://caifuhao.eastmoney.com/news/20250527091817637097790",
+          "quote": "「高澜股份与中科曙光达成了预装合作，为中科曙光的服务器产品提供液冷解决方案」「与英特尔、英伟达等芯片厂商以及中科曙光、浪潮信息等服务器企业联合开发液冷标准」(注:东方财富财富号自媒体,非正式披露)"
+        },
+        {
+          "url": "https://finance.sina.com.cn/roll/2025-09-13/doc-infqimap2003343.shtml",
+          "quote": "「中科曙光旗下曙光数创在浸没式液冷独占鳌头」「英维克、高澜股份等在各自优势产品上也占据较高份额」"
+        },
+        {
+          "url": "https://www.cls.cn/detail/1402020",
+          "quote": "「液冷或成数据中心散热唯一选择，三大A股龙头领衔中国厂商」(高澜为液冷同业龙头之一)"
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "005930",
+      "target": "600584.SH",
+      "edge_type": "capex_driver",
+      "curated_sign": "+1",
+      "proof_sign": "±",
+      "curated_revenue_share": 0.03,
+      "proof_revenue_share": 0.05,
+      "curated_is_estimate": true,
+      "subject_check": "target_exposure",
+      "divergence_kind": "ok",
+      "sign_verdict": "⚠ proof stays ± (curated +1) → reconsider / re-curate",
+      "revenue_share_verdict": "≈ corroborated (Δ0.02)",
+      "graph_action": "DEMOTE to presence-only pending re-curation (proof would not pin the sign)",
+      "proof_basis": "长电韩国工厂(原星科金朋)为三星提供32层闪存堆叠封装，三星是其客户但仅属存储堆叠的边缘渠道；长电与全球前二十大半导体85%有合作、前五大客户合计52.32%(2024)却以苹果/英伟达/高通/海力士/西数为头部，三星非主力。三星资本开支主要投向自有晶圆厂及自建AVP先进封装(2022年底成立AVP团队)，对OSAT形成竞争挤压；外溢给长电的封测拉动微弱，需求拉动(+)与同业竞争(−)相抵故净向歧义。",
+      "proof_revenue_share_basis": "三星仅经韩国子公司承接32层NAND堆叠封装、非头部客户；长电前五大客户合计52.32%(2024年报口径)、且头部为苹果/英伟达/高通/海力士/西数，三星个体占比估计≤5%(估计)",
+      "curated_revenue_share_basis": "估计: capex_driver = 长电 revenue exposure to Samsung HBM-packaging capex cycle via domestic adv-packaging substitution. Indirect/hop_class=2 (seed strength 0.55, revenue_share null). Live slice notes JCET (长电) cut into Samsung/LG packaging sup",
+      "sources": [
+        {
+          "url": "https://caifuhao.eastmoney.com/news/20250924205831037427970",
+          "quote": "韩国工厂为三星、美光提供32层闪存堆叠封装"
+        },
+        {
+          "url": "https://caifuhao.eastmoney.com/news/20250924205831037427970",
+          "quote": "长电科技与苹果、高通、英伟达、AMD、美光、SK海力士等全球前二十大半导体公司中的85%建立合作关系"
+        },
+        {
+          "url": "https://semiconductor.samsung.cn/foundry/advanced-package/package-turnkey-service/",
+          "quote": ""
+        },
+        {
+          "url": "https://news.qq.com/rain/a/20250306A05TMV00",
+          "quote": ""
+        },
+        {
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202408261639447416_1.pdf",
+          "quote": ""
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "603501.SH",
+      "target": "300769.SZ",
+      "edge_type": "supplier",
+      "curated_sign": "+1",
+      "proof_sign": "±",
+      "curated_revenue_share": 0.05,
+      "proof_revenue_share": null,
+      "curated_is_estimate": true,
+      "subject_check": "target_exposure",
+      "divergence_kind": "no_fresh",
+      "sign_verdict": "⚠ proof stays ± (curated +1) → reconsider / re-curate",
+      "revenue_share_verdict": "? no fresh estimate",
+      "graph_action": "DEMOTE to presence-only pending re-curation (proof would not pin the sign)",
+      "proof_basis": "韦尔股份做CMOS图像传感器/模拟/功率芯片,德方纳米做纳米磷酸铁锂正极材料,其原材料为碳酸锂/磷酸铁/磷酸等化工品、客户为宁德时代等电池厂,与半导体器件无采购关系;全网检索未见任何供货或客户披露,此\"供应商\"边无法证实、传导≈0,故净向歧义。",
+      "proof_revenue_share_basis": "二者无可证实的供应关系,德方纳米成本端为锂盐/铁源/磷源等化工原料,半导体器件占比可视为约0,无可靠数字可估,故填null",
+      "curated_revenue_share_basis": "估计: supplier edge = 韦尔 CIS/auto-SoC cost-share of 德赛西威 ADAS-controller BOM. Controller BOM is dominated by the compute SoC (Nvidia Orin/Thor) + PCB; camera CIS is a minority $ line and 韦尔 is one of several sensor suppliers. Seed hop_class=2",
+      "sources": [
+        {
+          "url": "https://baike.eastmoney.com/item/%E4%B8%8A%E6%B5%B7%E9%9F%A6%E5%B0%94%E5%8D%8A%E5%AF%BC%E4%BD%93%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8",
+          "quote": ""
+        },
+        {
+          "url": "https://emweb.eastmoney.com/PC_HSF10/BusinessAnalysis/Index?type=web&code=SZ300769",
+          "quote": ""
+        },
+        {
+          "url": "https://paper.cnstock.com/html/2026-04/29/content_2209839.htm",
+          "quote": ""
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "300661.SZ",
+      "target": "601138.SH",
+      "edge_type": "supplier",
+      "curated_sign": "+1",
+      "proof_sign": "±",
+      "curated_revenue_share": 0.05,
+      "proof_revenue_share": 0.01,
+      "curated_is_estimate": true,
+      "subject_check": "target_exposure",
+      "divergence_kind": "ok",
+      "sign_verdict": "⚠ proof stays ± (curated +1) → reconsider / re-curate",
+      "revenue_share_verdict": "≈ corroborated (Δ0.04)",
+      "graph_action": "DEMOTE to presence-only pending re-curation (proof would not pin the sign)",
+      "proof_basis": "圣邦采用直销+代理混合模式售芯，年报前五大客户仅以\"第一名/第二名\"代称未披露真名，公开提及的终端品牌为联想/中兴/小米/华为/长虹/海尔等、未含工业富联；即便其电源管理/信号链芯片进入服务器，在工业富联AI服务器BOM中占比极低(GPU占整机成本50%~83%)，且圣邦2024全年营收约33亿元不足工业富联营业成本(逾5000亿元)的1%，该供货关系未获直接披露证实、传导对目标盈利可忽略，故净向歧义。",
+      "proof_revenue_share_basis": "无直接供货披露(圣邦前五大客户匿名、其公开终端品牌名单未列工业富联)；以圣邦2024营收约33亿/工业富联营业成本逾5000亿估算暴露上限不足1%，且圣邦仅为众多PMIC/信号链供应商之一，实际占比更低(估计/上限)",
+      "curated_revenue_share_basis": "估计/estimate (low bucket 0.05): 圣邦 analog IC (PMIC) → 工业富联 AI server PSU/power-rail BOM (seed note 'revenue_share: null', hop_class=2 PMIC→PSU→server). Power-management analog is a small, hop-2 BOM line; domestic-analog content in PSU is mod",
+      "sources": [
+        {
+          "url": "https://basic.10jqka.com.cn/300661/operate.html",
+          "quote": "公司通过向终端客户、代理商销售芯片产品（前五大客户以\"第一名\"\"第二名\"代称，未披露名称，文中未提及工业富联或富士康）"
+        },
+        {
+          "url": "https://user.guancha.cn/main/content?id=1004448",
+          "quote": ""
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "600584.SH",
+      "target": "603019.SH",
+      "edge_type": "supplier",
+      "curated_sign": "+1",
+      "proof_sign": "±",
+      "curated_revenue_share": 0.05,
+      "proof_revenue_share": null,
+      "curated_is_estimate": true,
+      "subject_check": "target_exposure",
+      "divergence_kind": "no_fresh",
+      "sign_verdict": "⚠ proof stays ± (curated +1) → reconsider / re-curate",
+      "revenue_share_verdict": "? no fresh estimate",
+      "graph_action": "DEMOTE to presence-only pending re-curation (proof would not pin the sign)",
+      "proof_basis": "长电为封测龙头(2024前五大客户占52.32%，核心客户为英伟达及存储/逻辑芯片设计商)，中科曙光为服务器系统厂、采购成品芯片(经海光等Fabless)而非封测服务，二者无直接供货披露；真实链路为长电封测→海光CPU→曙光整机两跳，且封测仅占芯片成本极薄一层，故沿此“直接供应商”边传导极弱、净向歧义。",
+      "proof_revenue_share_basis": "无任何直接采购披露；曙光采购的是海光等成品芯片而非长电封测服务，长电封测仅为间接、极小成本层，目标对源的直接暴露无法量化(null)。",
+      "curated_revenue_share_basis": "估计/estimate (low bucket 0.05): 长电 advanced packaging → 海光/曙光 back-end (seed note 'revenue_share: null', hop_class=2). Packaging is a back-end chip-service cost, an indirect line at the server-COGS level (not a full board/module). Low bucket",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/JCET_(company)",
+          "quote": ""
+        },
+        {
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202408261639447416_1.pdf",
+          "quote": ""
+        },
+        {
+          "url": "http://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-03-05/603019_20250305_LPGP.pdf",
+          "quote": ""
+        },
+        {
+          "url": "https://news.qq.com/rain/a/20250526A09GDX00",
+          "quote": "海光信息并购中科曙光，继华为之后中国第二座\"AI工厂\""
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "COMM:COPPER",
+      "target": "002384.SZ",
+      "edge_type": "raw_material",
+      "curated_sign": "-1",
+      "proof_sign": "-1",
+      "curated_revenue_share": 0.1,
+      "proof_revenue_share": 0.25,
+      "curated_is_estimate": true,
+      "subject_check": "target_exposure",
+      "divergence_kind": "ok",
+      "sign_verdict": "✓ agree (-1) → keep",
+      "revenue_share_verdict": "~ close (Δ0.15)",
+      "graph_action": "KEEP (corroborated) — no change",
+      "proof_basis": "东山精密PCB业务占营收约67%(2024年PCB近248亿/总营收367.7亿),PCB为典型用铜方——铜材料约占PCB原材料成本70%、原材料占生产成本超60%,铜箔/覆铜板涨价(铜箔年内涨幅达30%)直接抬升营业成本压制毛利,故为成本承受方→-1;高端AI PCB有一定转嫁能力,传导强度偏中(2026Q1毛利率19.33%相对稳定)。",
+      "proof_revenue_share_basis": "估计——PCB占营收约67%,行业数据铜材料约占PCB原材料成本70%、原材料约占生产成本60%(即铜约占PCB成本~40%),按PCB营收占比折算全公司铜成本暴露约0.25(估计,非披露确数)",
+      "curated_revenue_share_basis": "估计/estimate: live sign_basis (002384 raw_material edge) discloses 覆铜板(CCL) ≈ 30% of PCB/FPC 物料成本, and flags FPC heavy reliance on 压延铜. But this edge is COPPER (the commodity), not CCL: copper is only ~30-50% of CCL cost (foil) alongside gla",
+      "sources": [
+        {
+          "url": "https://www.sohu.com/a/1016751830_121613636",
+          "quote": "原材料成本占 PCB 生产成本 60% 以上，铜箔、覆铜板等大幅涨价，导致企业营业成本增速远超营收增速，毛利率显著下滑"
+        },
+        {
+          "url": "https://www.sohu.com/a/1016751830_121613636",
+          "quote": "铜箔年内涨幅达 30%"
+        },
+        {
+          "url": "https://www.ic-pcb.cn/pcb_news/pcb_news1022.html",
+          "quote": ""
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "COMM:COPPER",
+      "target": "002916.SZ",
+      "edge_type": "raw_material",
+      "curated_sign": "-1",
+      "proof_sign": "-1",
+      "curated_revenue_share": 0.15,
+      "proof_revenue_share": 0.2,
+      "curated_is_estimate": true,
+      "subject_check": "target_exposure",
+      "divergence_kind": "ok",
+      "sign_verdict": "✓ agree (-1) → keep",
+      "revenue_share_verdict": "≈ corroborated (Δ0.05)",
+      "graph_action": "KEEP (corroborated) — no change",
+      "proof_basis": "深南电路主要原材料为覆铜板/半固化片/铜箔等,公司明示\"铜价是影响公司原材料成本变化的因素之一\"\"铜等原材料价格波动影响较大\",铜价↑经覆铜板/铜箔抬升成本→成本承受方→-1;但高价值封装基板(树脂占比高)与高端PCB转嫁能力强,传导强度偏中。",
+      "proof_revenue_share_basis": "估计——主营覆铜板/铜箔等含铜材料,行业CCL约占PCB成本30%、铜箔约占CCL成本42%并叠加直接铜箔采购;但含高价值IC封装基板(树脂为主)及电子装联业务摊薄,全公司铜成本暴露约0.20(估计,非披露确数)",
+      "curated_revenue_share_basis": "估计/estimate: live sign_basis (002916 raw_material edge) discloses 覆铜板占PCB生产成本 30%~40% 且铜箔占覆铜板成本超40%. Copper-foil cost-share ≈ ~0.35 (mid CCL band) × ~0.40 (copper-in-CCL) ≈ ~0.14 of production cost; 深南电路 is a purer PCB/IC-substrate play tha",
+      "sources": [
+        {
+          "url": "https://stock.stockstar.com/IG2024071500027493.shtml",
+          "quote": "公司主要原材料包括覆铜板、半固化片、铜箔、金盐、油墨等，涉及品类较多，铜价是影响公司原材料成本变化的因素之一"
+        },
+        {
+          "url": "https://stock.stockstar.com/RB2026010900033173.shtml",
+          "quote": "通过多种途径开展原材料采购，优化原材料成本结构，同时加强公司对原材料价格波动的关注"
+        },
+        {
+          "url": "https://m.hexun.com/stock/2024-07-15/213577136.html",
+          "quote": ""
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "POLICY:DOMESTIC_COMPUTE_SUBSIDY",
+      "target": "688041.SH",
+      "edge_type": "policy_driver",
+      "curated_sign": "+1",
+      "proof_sign": "+1",
+      "curated_revenue_share": 0.6,
+      "proof_revenue_share": 0.8,
+      "curated_is_estimate": true,
+      "subject_check": "target_exposure",
+      "divergence_kind": "real_refresh_bitemporal",
+      "sign_verdict": "✓ agree (+1) → keep",
+      "revenue_share_verdict": "⚠ DIVERGE (Δ0.20)",
+      "graph_action": "REVISIT revenue_share 0.6→~0.8",
+      "proof_basis": "海光信息主营国产CPU+DCU(深算单元)，2024营收91.62亿(+52.40%)、归母净利19.31亿，财报明示\"下游信创与AI算力市场需求持续高企\"；信创/东数西算/算力补贴及国产化要求直接拉动其在党政金融(中标招行、上交所信创服务器)及运营商智算采购(联通AI服务器专项支持海光芯片)放量，政策强受益+1。",
+      "proof_revenue_share_basis": "海光几乎全部营收来自国产CPU/DCU，下游信创服务器与智算中心采购高度受国产化补贴政策驱动(估计);2024营收91.62亿全部为国产处理器产品",
+      "curated_revenue_share_basis": "估计/estimate: 海光信息 is a 国产CPU/DCU pure-play (曙光体系, ai_chip_domestic). live sign_basis (688041 policy_driver edge): 「信创采购国产CPU份额在60%以上，其中第一梯队为华为和海光信息」「在党政、行业市场占据主导地位」. Revenue is dominated by 信创/党政/行业 + domestic-compute procurement → high pol",
+      "sources": [
+        {
+          "url": "https://finance.sina.com.cn/stock/relnews/cn/2025-03-06/doc-inensrzp6891552.shtml",
+          "quote": "「2024全年公司实现营业收入91.62亿元（yoy+52.40%），实现归母净利润19.31亿元（yoy+52.87%）」「下游信创与AI算力市场需求持续高企，2025年有望延续景气度」"
+        },
+        {
+          "url": "https://www.stcn.com/article/detail/1822425.html",
+          "quote": ""
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "POLICY:DOMESTIC_COMPUTE_SUBSIDY",
+      "target": "688256.SH",
+      "edge_type": "policy_driver",
+      "curated_sign": "+1",
+      "proof_sign": "+1",
+      "curated_revenue_share": 0.65,
+      "proof_revenue_share": 0.9,
+      "curated_is_estimate": true,
+      "subject_check": "target_exposure",
+      "divergence_kind": "real_refresh_bitemporal",
+      "sign_verdict": "✓ agree (+1) → keep",
+      "revenue_share_verdict": "⚠ DIVERGE (Δ0.25)",
+      "graph_action": "REVISIT revenue_share 0.65→~0.9",
+      "proof_basis": "寒武纪为国产AI加速芯片纯标的，2024营收11.74亿(+65.56%)、Q4首次单季盈利且其非经常性损益明确包含计入当期的政府补助；客户为智算中心/互联网大厂(前五大占94.63%、第一大占79.15%)，多地\"新建智算中心国产算力芯片占比≥50%、部分2027年达100%\"等补贴/国产化政策直接驱动其下游采购，政策强受益+1。",
+      "proof_revenue_share_basis": "寒武纪近乎全部营收为国产AI芯片，下游智算中心采购直接由国产化补贴政策驱动(估计);2024前五大客户占94.63%、第一大客户占79.15%",
+      "curated_revenue_share_basis": "估计/estimate: 寒武纪 is 云端AI训练/推理芯片, 国产算力核心 — an even purer policy play than 海光 (no commercial x86 CPU server-channel revenue). live sign_basis (688256 policy_driver edge): 「2025年是政府和运营商算力采购大年……规划建设105 EFlops智能算力，国产算力厂商迎历史性机遇」. Cloud AI-acceler",
+      "sources": [
+        {
+          "url": "https://m.rccaijing.com/news-7368937554584467000.html",
+          "quote": "「寒武纪芯片大单被辟谣，前五大客户销售额占营收比例达94.63%」"
+        },
+        {
+          "url": "https://www.icsmart.cn/87474/",
+          "quote": ""
+        },
+        {
+          "url": "https://caifuhao.eastmoney.com/news/20250729171200575218510",
+          "quote": ""
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "688981.SH",
+      "target": "002049.SZ",
+      "edge_type": "supplier",
+      "curated_sign": "+1",
+      "proof_sign": "±",
+      "curated_revenue_share": 0.15,
+      "proof_revenue_share": null,
+      "curated_is_estimate": true,
+      "subject_check": "target_exposure",
+      "divergence_kind": "no_fresh",
+      "sign_verdict": "⚠ proof stays ± (curated +1) → reconsider / re-curate",
+      "revenue_share_verdict": "? no fresh estimate",
+      "graph_action": "DEMOTE to presence-only pending re-curation (proof would not pin the sign)",
+      "proof_basis": "紫光国微为Fabless(特种集成电路+智能安全芯片)需委外流片，但无任何公开披露确认中芯国际为其代工厂；行业资料仅把\"紫光同创(紫光国微)\"列入国产FPGA阵营，并非002049实际代工关系，且紫光同创未并表入002049；2024年前五大供应商合计约56.62%却未具名中芯国际，关系无法证实，故沿此边传导无法确认，判净向歧义。",
+      "proof_revenue_share_basis": "无任何披露确认中芯国际为紫光国微代工厂；2024年报前五大供应商合计约56.62%但未具名(数据系第三方转述、未取得逐字原文)，关系本身未证实，无法估计。",
+      "curated_revenue_share_basis": "估计: supplier edge = 中芯 foundry-wafer cost-share of 紫光国微 (FPGA/特种IC) COGS. Wafer+foundry is a large COGS line for a fabless designer, but 紫光国微's special/security chips are mature/specialty-node split across multiple foundries (中芯/华虹/in-house",
+      "sources": [
+        {
+          "url": "https://finance.sina.cn/2020-08-18/detail-iivhuipn9368736.d.html",
+          "quote": "「FPGA：紫光同创（紫光国微），安路信息（士兰微入股）」"
+        },
+        {
+          "url": "https://www.ofweek.com/im/2026-04/ART-201930-8420-30685652.html",
+          "quote": ""
+        }
+      ]
+    },
+    {
+      "scope": "ai_compute",
+      "source": "688981.SH",
+      "target": "603019.SH",
+      "edge_type": "supplier",
+      "curated_sign": "+1",
+      "proof_sign": "±",
+      "curated_revenue_share": 0.05,
+      "proof_revenue_share": null,
+      "curated_is_estimate": true,
+      "subject_check": "target_exposure",
+      "divergence_kind": "no_fresh",
+      "sign_verdict": "⚠ proof stays ± (curated +1) → reconsider / re-curate",
+      "revenue_share_verdict": "? no fresh estimate",
+      "graph_action": "DEMOTE to presence-only pending re-curation (proof would not pin the sign)",
+      "proof_basis": "中芯国际实为海光信息(深算三号7nm DCU\"与中芯国际、长电科技合作\"实现国产化)的代工厂，而非直接供货中科曙光；曙光是服务器系统集成商，向海光采购成品芯片而非向中芯采购晶圆，故SMIC→曙光为间接多跳关系；叠加海光拟约1160亿换股吸收合并曙光(曙光原持海光27.96%)，且中芯先进制程两面受力(N+2良率不足20%、产能受限既是国产替代使能项也是瓶颈)，传导方向不确定，判净向歧义。",
+      "proof_revenue_share_basis": "曙光为集成商，直接向中芯采购的晶圆成本暴露≈0；与海光的代工关系亦属远期(深算三号)且无金额披露，无法估计。",
+      "curated_revenue_share_basis": "估计: supplier edge = 中芯 foundry cost-share of 中科曙光 server COGS. Relationship is actually to 海光 (曙光 associate) per seed ('中芯 foundry → 海光 AI chip fabrication', hop_class=2); 海光's advanced DCU/CPU are NOT on 中芯 (lacks node), and blank-foundry ",
+      "sources": [
+        {
+          "url": "https://www.eefocus.com/article/1840973.html",
+          "quote": "「通过与中芯国际、长电科技合作，实现从设计到封测的全链条国产化」"
+        },
+        {
+          "url": "https://finance.sina.com.cn/wm/2025-06-10/doc-inezpywk5873240.shtml",
+          "quote": "「截至一季度末，持股6.5亿股，持股比例为27.96%」"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "subject_check": {
+      "target_exposure": 34,
+      "source_subject_suspect": 3
+    },
+    "divergence_kind": {
+      "no_fresh": 9,
+      "definition_error_recurate_down": 3,
+      "ok": 21,
+      "real_refresh_bitemporal": 4
+    },
+    "sign": {
+      "agree": 13,
+      "demote": 24
+    }
+  },
+  "note": " [subject-normalized 2026-06-16: subject_check is SUBJECT-based per quant ratify — is_estimate=false supplier/raw_material with a curated value = source_subject_suspect]."
+}

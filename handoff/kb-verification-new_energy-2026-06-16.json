@@ -1,0 +1,1565 @@
+{
+  "schema": "kb-chain-verification@1",
+  "generated_for": "stock-quant chain-KG consume-side (ADR-0077 Pillar B / ADR-0075 D2)",
+  "scope": "new_energy",
+  "proof": "two-stage(haiku gather + DeepSeek reason)",
+  "subject_invariant": "target_exposure (denominator = target own revenue/COGS) — ratified Q2 / OQ-R1",
+  "firewall": "advisory/read-only; KB never pins a sign or writes the graph; human last-look disposes",
+  "legend": {
+    "divergence_kind": "definition_error_recurate_down = curated used SOURCE subject → adopt proof_revenue_share; real_refresh_bitemporal = same subject, value moved → append proof as new observed_at; propose = no curated value; ok = corroborated; no_fresh = proof returned none",
+    "subject_check": "target_exposure = comparable to proof; source_subject_suspect = curated encoded source concentration (not comparable, re-curate)"
+  },
+  "count": 50,
+  "rows": [
+    {
+      "scope": "new_energy",
+      "source": "PVDEMAND",
+      "target": "601012.SH",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.72,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.72 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.72 (advisory; human pins)",
+      "proof_basis": "隆基绿能太阳能组件收入占比72.23%，2025年12月组件定标中标1.61GW，直接受益于光伏新增装机需求。",
+      "proof_revenue_share_basis": "太阳能组件收入占比72.23%（来源：新浪财经）",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://finance.sina.cn/2024-05-14/detail-inavestr1117903.d.html",
+          "quote": "隆基绿能的太阳能组件收入占比为72.23%"
+        },
+        {
+          "url": "https://www.trendforce.cn/industry-news/green-energy/20260115-2928.html",
+          "quote": "12月超6GW组件定标，隆基/通威/晶科领跑；隆基中标1.61GW"
+        },
+        {
+          "url": "https://www.stcn.com/article/detail/3501278.html",
+          "quote": "五大光伏组件厂商(隆基、晶科、天合、晶澳等)主要供应光伏电站开发商和EPC承包商"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "PVDEMAND",
+      "target": "002459.SZ",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.91,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.91 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.91 (advisory; human pins)",
+      "proof_basis": "晶澳科技光伏组件收入占比95.54%，2025年上半年组件营收217.77亿元占营收总额91%，出货33.79GW，直接受益于光伏装机需求。",
+      "proof_revenue_share_basis": "组件营收占营收总额91%（来源：2025年半年度业绩预告）",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://finance.sina.com.cn/jjxw/2025-01-27/doc-inehkyez8786278.shtml",
+          "quote": "晶澳科技助力中国电建境外最大光伏投资项目圆满落成（Brazil Maretti 425MW项目）；晶澳科技作为组件供应商"
+        },
+        {
+          "url": "https://www.cpnn.com.cn/news/xny/202502/t20250205_1770011.html",
+          "quote": "华能、晶澳联合开发300MW光伏治沙项目"
+        },
+        {
+          "url": "https://file.finance.qq.com/finance/hs/pdf/2025/07/15/1224163208.PDF",
+          "quote": "晶澳太阳能科技股份有限公司2025年半年度业绩预告，光伏电池组件出货33.79GW，营收217.77亿元，占营收总额的91%"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "PVDEMAND",
+      "target": "688599.SH",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.77,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.77 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.77 (advisory; human pins)",
+      "proof_basis": "天合光能光伏组件收入占比77.33%，2025年全球光伏新增装机315GW，公司持续供应组件，直接受益于装机需求增长。",
+      "proof_revenue_share_basis": "光伏组件收入占比77.33%（来源：东方财富）",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://www.china5e.com/news/news-1196788-1.html",
+          "quote": "天合光能(688599)：光伏组件修复 储能放量在即；组件销售市场进一步聚焦海外，海外出货比例提升至约6成"
+        },
+        {
+          "url": "https://stockmc.xueqiu.com/202604/688599_20260430_VKTH.pdf",
+          "quote": "2025年全球光伏产业下游装机需求保持增长，国家能源局数据统计显示，2025年中国光伏新增装机为315GW"
+        },
+        {
+          "url": "https://caifuhao.eastmoney.com/news/20250501114259826731640.html",
+          "quote": "天合光能光伏组件收入占比77.33%"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "PVDEMAND",
+      "target": "688223.SH",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.96,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.96 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.96 (advisory; human pins)",
+      "proof_basis": "晶科能源2024年光伏组件销售收入890.7亿元，全球组件出货排名第1，2025年12月中标1.01GW，直接受益于全球光伏装机需求。",
+      "proof_revenue_share_basis": "光伏模块业务收入890.7亿元，占营业收入924.7亿元的96.3%（来源：2024年年报）",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://jinkosolarcdn.shwebspace.com/uploads/&e6&99&b6&e7&a7&91&e8&83&bd&e6&ba&902024&e5&b9&b4&e5&b9&b4&e5&ba&a6&e6&8a&a5&e5&91&8a28.pdf",
+          "quote": "晶科能源股份有限公司2024年年度报告，实现营业收入924.7亿元，光伏模块业务收入890.7亿元，模块销售92.9GW"
+        },
+        {
+          "url": "https://www.trendforce.cn/industry-news/green-energy/20260115-2928.html",
+          "quote": "晶科N型TOPCon组件包揽中广核青海德令哈一期项目1GW"
+        },
+        {
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202202071545468523_1.pdf",
+          "quote": "晶科能源主要客户为NextEra Energy、Enel Group等全球光伏电站开发商和电力公司，服务覆盖160+国家和地区"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "PVDEMAND",
+      "target": "300274.SZ",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.37,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.37 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.37 (advisory; human pins)",
+      "proof_basis": "阳光电源是全球光伏逆变器出货量第二，2024年逆变器收入291.27亿元，中标中国能建15GW、国家电投4.5GW等大型集采，光伏装机需求增长直接拉动其逆变器出货。",
+      "proof_revenue_share_basis": "2024年逆变器等电力电子转换设备收入占总营收37.41%，来源年报。",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://finance.sina.com.cn/stock/aigc/stockfs/2025-04-27/doc-ineuqumz7624342.shtml",
+          "quote": "阳光电源2024年逆变器等电力电子转换设备实现收入291.27亿元，同比增长5.33%"
+        },
+        {
+          "url": "https://news.solarbe.com/202502/21/386680.html",
+          "quote": "260GW逆变器定标争夺战：华为、阳光、特变、上能、中车中标规模均超20GW"
+        },
+        {
+          "url": "https://news.smm.cn/news/102892644",
+          "quote": "华为、阳光、上能、特变等中标中国能建15GW逆变器集采订单"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "PVDEMAND",
+      "target": "300763.SZ",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.68,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.68 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.68 (advisory; human pins)",
+      "proof_basis": "锦浪科技是全球光伏逆变器出货量前三，2024年逆变器业务收入44.52亿元（占营收68.05%），主营分布式光伏装机，光伏装机需求增长直接拉动其逆变器销售。",
+      "proof_revenue_share_basis": "2024年光伏逆变器业务收入占营业收入68.05%，来源年报。",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://finance.sina.com.cn/stock/aigc/stockfs/2025-04-29/doc-ineuufek1543177.shtml",
+          "quote": "锦浪科技2024年报解读：经营活动现金流大增115%"
+        },
+        {
+          "url": "https://static.cninfo.com.cn/finalpage/2025-04-29/1223361596.PDF",
+          "quote": "锦浪科技股份有限公司2024年年度报告摘要"
+        },
+        {
+          "url": "https://news.solarbe.com/202407/15/380293.html",
+          "quote": "2024光伏半年报概览"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "PVDEMAND",
+      "target": "688390.SH",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "±",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.33,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=± (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.33 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.33 (advisory; human pins)",
+      "proof_basis": "固德威为全球逆变器第五大企业，中标广东电网及800MW集采，但2024年上半年营收同比下降17.47%，且户用系统销售占比45%超过并网逆变器（33%），需求信号对并网逆变器拉动作用被户用业务结构稀释，方向存在歧义。",
+      "proof_revenue_share_basis": "2024年上半年光伏并网逆变器营收占比33%，来源半年报；估计。",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://pdf.dfcfw.com/pdf/H2_AN202408301639627683_1.pdf",
+          "quote": "固德威技术股份有限公司2024年半年度报告"
+        },
+        {
+          "url": "https://www.goodwe.com/news-exhibition/news/4678.html",
+          "quote": "固德威入选2024福布斯中国出海全球化旗舰品牌Top30"
+        },
+        {
+          "url": "https://solar.in-en.com/html/solar-2457649.html",
+          "quote": "224GW年度光伏逆变器榜单中固德威位列前十"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "PVDEMAND",
+      "target": "688032.SH",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.22,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.22 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.22 (advisory; human pins)",
+      "proof_basis": "禾迈股份全球微逆市场份额约22%，2024年微逆销量99万台，海外销售占比64.31%，光伏装机需求增长（尤其是户用和工商业屋顶）直接拉动其微型逆变器出货。",
+      "proof_revenue_share_basis": "全球微逆市场份额约22%，来源行业数据；估计。",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://news.qq.com/rain/a/20250527A04LWW00",
+          "quote": "禾迈股份签10亿户用光伏合作协议 全球化发展境外销售额占64.3%"
+        },
+        {
+          "url": "http://static.cninfo.com.cn/finalpage/2025-04-30/1223417404.PDF",
+          "quote": "杭州禾迈电力电子股份有限公司2024年年度报告"
+        },
+        {
+          "url": "https://www.solarzoom.com/article-192896-1.html",
+          "quote": "禾迈股份2024年营业收入降1.6%，净利润降32.8%"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "PVDEMAND",
+      "target": "603806.SH",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.3,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.3 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.3 (advisory; human pins)",
+      "proof_basis": "福斯特是全球光伏胶膜龙头，市占率约50%，2024年光伏材料营收181.11亿元占主营业务94.59%，装机需求直接驱动胶膜采购，受益于全球装机需求旺盛。",
+      "proof_revenue_share_basis": "估计（光伏胶膜业务占营收94.59%，但下游组件客户对胶膜的采购完全由装机需求驱动，保守估计需求传导占比为高）",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=603806&id=10856248",
+          "quote": "前五名客户销售额737,733.43万元，占年度销售总额38.53%。2024年公司报告期内光伏胶膜业务仍为主营，出货量实现高速增长，受益于全球装机需求旺盛"
+        },
+        {
+          "url": "https://solar.ofweek.com/2025-04/ART-260001-8420-30661176.html",
+          "quote": "晶科能源、隆基绿能、天合光能、晶澳科技、通威太阳能、正泰新能等光伏龙头企业均为福斯特的长期合作大客户，凭借优异的产品性能和完善的服务体系，福斯特已实现国内外光伏组件企业的全覆盖"
+        },
+        {
+          "url": "https://www.qianzhan.com/analyst/detail/220/230504-b8e79216.html",
+          "quote": "光伏胶膜处于产业链中游，上游原材料是EVA和POE粒子，下游为光伏组件厂商。公司凭借规模效应、成本优势和产品品质，在行业价格波动周期中具备更强的抗风险能力"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "PVDEMAND",
+      "target": "002865.SZ",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.3,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.3 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.3 (advisory; human pins)",
+      "proof_basis": "钧达股份是全球领先光伏电池制造商，2024年营收99.5亿元，光伏电池是组件核心原材料，装机需求直接驱动电池采购，客户覆盖晶科、隆基等组件企业及海外市场。",
+      "proof_revenue_share_basis": "估计（光伏电池业务为绝对主营，但前五大客户收入占比41.30%，且海外销售占比51.87%，装机需求对电池采购的拉动为高）",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://news.qq.com/rain/a/20250319A03PSW00",
+          "quote": "2024年年末，公司前五大客户收入占比从2023年的52.45%降至41.30%，第一大客户占比从27.73%跌至19.01%。钧达股份的2024：客户集中度下降，收入近腰斩"
+        },
+        {
+          "url": "https://finance.sina.com.cn/stock/relnews/cn/2025-03-19/doc-ineqeanw1764573.shtml",
+          "quote": "2024年，钧达股份营收99.5亿元，同比下降46.7%。公司成为海外多个国家、地区光伏电池的主要供应商，其中印度、土耳其、欧洲等主要海外市场占有率行业领先"
+        },
+        {
+          "url": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=002865&id=10789582",
+          "quote": "海南钧达新能源科技股份有限公司2024年年度报告，钧达股份客户主要为中国和全球光伏组件制造商，产品最终用于太阳能发电项目"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "PVDEMAND",
+      "target": "600732.SH",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.3,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.3 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.3 (advisory; human pins)",
+      "proof_basis": "爱旭股份是太阳能电池和ABC组件生产商，2024年营收111.55亿元，ABC组件占2025年上半年营收74%，作为光伏组件生产商直接受全球装机需求驱动。",
+      "proof_revenue_share_basis": "估计（组件及电池业务为绝对主营，装机需求直接决定其出货量，保守估计需求传导占比为高）",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "http://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=600732&id=11078286",
+          "quote": "上海爱旭新能源股份有限公司2024年年度报告，前五名客户销售额257,662.42万元，占年度销售总额23.10%"
+        },
+        {
+          "url": "https://finance.sina.com.cn/stock/relnews/cn/2025-05-01/doc-inevarzp2811042.shtml",
+          "quote": "爱旭股份：2024年实现营业总收入111.55亿元。ABC组件逐步成为公司主要产品，在2025年上半年营收占比已达74%"
+        },
+        {
+          "url": "http://qxb-pdf-osscache.qixin.com/AnBaseinfo/07593ff7a7459b0935c976604df29d8f.pdf",
+          "quote": "爱旭股份是一家专注于光伏发电核心产品的研发和制造企业，为客户提供太阳能电池、ABC(AllBackContact)组件和场景化的整体解决方案"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "PVDEMAND",
+      "target": "600438.SH",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "±",
+      "curated_revenue_share": null,
+      "proof_revenue_share": null,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "none",
+      "sign_verdict": "proof=± (curated unpinned)",
+      "revenue_share_verdict": "—",
+      "graph_action": "KEEP (corroborated) — no change",
+      "proof_basis": "未检索到任何关于光伏装机需求信号对该公司的具体影响证据，无法判断方向。",
+      "proof_revenue_share_basis": "无证据，无法估计",
+      "curated_revenue_share_basis": "",
+      "sources": []
+    },
+    {
+      "scope": "new_energy",
+      "source": "PVDEMAND",
+      "target": "688303.SH",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "±",
+      "curated_revenue_share": null,
+      "proof_revenue_share": null,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "none",
+      "sign_verdict": "proof=± (curated unpinned)",
+      "revenue_share_verdict": "—",
+      "graph_action": "KEEP (corroborated) — no change",
+      "proof_basis": "未检索到任何关于光伏装机需求信号对该公司的具体影响证据，无法判断方向。",
+      "proof_revenue_share_basis": "无证据，无法估计",
+      "curated_revenue_share_basis": "",
+      "sources": []
+    },
+    {
+      "scope": "new_energy",
+      "source": "PVDEMAND",
+      "target": "605117.SH",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "±",
+      "curated_revenue_share": null,
+      "proof_revenue_share": null,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "none",
+      "sign_verdict": "proof=± (curated unpinned)",
+      "revenue_share_verdict": "—",
+      "graph_action": "KEEP (corroborated) — no change",
+      "proof_basis": "未检索到任何关于光伏装机需求信号对该公司的具体影响证据，无法判断方向。",
+      "proof_revenue_share_basis": "无证据，无法估计",
+      "curated_revenue_share_basis": "",
+      "sources": []
+    },
+    {
+      "scope": "new_energy",
+      "source": "PVDEMAND",
+      "target": "601865.SH",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "±",
+      "curated_revenue_share": null,
+      "proof_revenue_share": null,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "none",
+      "sign_verdict": "proof=± (curated unpinned)",
+      "revenue_share_verdict": "—",
+      "graph_action": "KEEP (corroborated) — no change",
+      "proof_basis": "未检索到任何关于光伏装机需求信号对该公司的具体影响证据，无法判断方向。",
+      "proof_revenue_share_basis": "无证据，无法估计",
+      "curated_revenue_share_basis": "",
+      "sources": []
+    },
+    {
+      "scope": "new_energy",
+      "source": "600438.SH",
+      "target": "601012.SH",
+      "edge_type": "supplier",
+      "curated_sign": "±",
+      "proof_sign": "±",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.15,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=± (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.15 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.15 (advisory; human pins)",
+      "proof_basis": "隆基绿能向通威股份采购高纯晶硅，2024-2026年长单预计总金额约391亿元，但价格按月协商，且隆基持有云南通威49%股权、四川永祥15%股权，存在关联交易；上游硅料涨价对隆基（组件/电池片生产商）构成成本压力（-1），但长单锁量可保障供应稳定性（+1），方向存在歧义。",
+      "proof_revenue_share_basis": "2024年隆基前五大供应商采购额150亿元，其中关联方采购36.99亿元（均为通威系），占采购总额约6.7%；但长单总金额391亿元覆盖三年，年均约130亿元，占隆基年采购额比例较高，保守估计为中等暴露（估计）",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://m.jiemian.com/article/11158479.html",
+          "quote": "近400亿，隆基绿能与通威股份再签硅料长单"
+        },
+        {
+          "url": "https://finance.ifeng.com/c/8ZTfWSbAytQ",
+          "quote": "通威股份旗下6家子公司与隆基绿能及其9家子公司签署高纯晶硅产品销售合同，约定2024年—2026年期间，买方合计采购卖方不少于86.24万吨高纯晶硅产品，采购价格按月协商确定。如以中国有色金属工业协会硅业分会2024年5月8日公布的国内N型料成交均价4.53万元/吨的价格测算，本次合同预计总金额约为391亿元（含税）。"
+        },
+        {
+          "url": "https://epaper.stcn.com/pic/202504/30/8bf93fadc3c24d8a46399ab5dc61972e.pdf",
+          "quote": "2024年，隆基绿能合并口径前五名供应商采购额为150.00亿元，占当期采购总额的27.18%。其中，前五名供应商采购额中关联方采购额36.99亿元，均为联营企业四川永祥新能源有限公司和云南通威高纯晶硅有限公司。"
+        },
+        {
+          "url": "https://m.jiemian.com/article/8472819.html",
+          "quote": "增资扩股完成后，永祥股份持有云南通威项目公司51%股权，隆基绿能持有项目公司49%股权；隆基在通威子公司四川永祥持有15%的股权。"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "EVDEMAND",
+      "target": "300073.SZ",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.3,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.3 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.3 (advisory; human pins)",
+      "proof_basis": "当升科技是锂电池正极材料供应商，主要客户包括CATL等全球电池龙头，2025年CATL电池装机量464.7GWh同比增长35.7%，与全球新能源车销量增长联动（Q2全球486.8万辆同比增30%），直接拉动公司正极材料需求。",
+      "proof_revenue_share_basis": "前五大客户销售收入占比62.5%，但未披露对新能源车需求方的直接收入占比，保守估计高暴露（估计）",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "http://static.cninfo.com.cn/finalpage/2025-08-27/1224575498.PDF",
+          "quote": "北京当升材料科技股份有限公司 2025 年半年度报告摘要"
+        },
+        {
+          "url": "https://finance.sina.com.cn/tech/roll/2025-08-19/doc-infmnxmf2674558.shtml",
+          "quote": "TrendForce：2025Q2 新能源车汽车销量达 486.8 万辆，同比增长 30%"
+        },
+        {
+          "url": "https://cj.sina.com.cn/articles/view/5952915705/162d248f906702gxcm",
+          "quote": "2025年全球动力电池市场分析：装机量达1,187GWh，CATL与BYD双雄称霸"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "EVDEMAND",
+      "target": "301358.SZ",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.3,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.3 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.3 (advisory; human pins)",
+      "proof_basis": "湖南裕能是磷酸铁锂正极材料龙头，对CATL与比亚迪合计销售收入占比58.44%，2025年全球新能源车销量Q1达446万台、Q2达486.8万台，CATL装机量464.7GWh同比增35.7%，带动下游材料需求增长。",
+      "proof_revenue_share_basis": "对CATL与比亚迪合计销售收入占比58.44%，但该比例为对两大客户的占比，非直接对新能源车需求方的收入占比，保守估计高暴露（估计）",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://finance.sina.com.cn/roll/2025-03-21/doc-ineqmfqm9613170.shtml",
+          "quote": "业绩大变脸，依赖大客户应收账款大增，湖南裕能如何破局"
+        },
+        {
+          "url": "https://finance.sina.com.cn/tech/roll/2025-05-05/doc-inevpsmt1397192.shtml",
+          "quote": "乘联会：2025年Q1全球汽车销量达2264万台 其中新能源汽车销量达446万台"
+        },
+        {
+          "url": "https://cj.sina.com.cn/articles/view/5952915705/162d248f906702gxcm",
+          "quote": "2025年全球动力电池市场分析：装机量达1,187GWh，CATL与BYD双雄称霸"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "EVDEMAND",
+      "target": "603659.SH",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.3,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.3 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.3 (advisory; human pins)",
+      "proof_basis": "璞泰来是锂电池负极材料主要供应商，主要客户包括CATL等全球电池龙头，2025年全球新能源车销量Q2达486.8万辆同比增30%，拉动电池采购和负极材料需求，公司2025年上半年负极材料出货量同比增8.1%。",
+      "proof_revenue_share_basis": "前五大客户销售金额占总销售收入70.75%，但未披露对新能源车需求方的直接收入占比，保守估计高暴露（估计）",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://www.putailai.com/Public/Uploads/uploadfile/files/20250507/shanghaitailaixinnengyuankejigufenyouxiangongsi2024niannianbaogao.pdf",
+          "quote": "上海璞泰来新能源科技集团股份有限公司2024 年年度报告"
+        },
+        {
+          "url": "https://finance.sina.com.cn/tech/roll/2025-08-19/doc-infmnxmf2674558.shtml",
+          "quote": "TrendForce：2025Q2 新能源车汽车销量达 486.8 万辆，同比增长 30%"
+        },
+        {
+          "url": "https://www.chyxx.com/industry/1225533.html",
+          "quote": "2025年中国电池新材料行业产业链、市场规模、代表企业经营现状分析"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "EVDEMAND",
+      "target": "600884.SH",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.3,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.3 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.3 (advisory; human pins)",
+      "proof_basis": "杉杉股份是锂电池负极材料龙头，主要客户为CATL、比亚迪等，2025年全球新能源车销量Q1为446万台、Q2为486.8万台（同比增30%），CATL装机量464.7GWh（增35.7%），直接拉动下游材料需求，公司负极材料销量同比增长超40%。",
+      "proof_revenue_share_basis": "未披露对新能源车需求方的直接收入占比，但主要客户均为动力电池龙头，保守估计高暴露（估计）",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://finance.sina.com.cn/stock/relnews/cn/2025-04-16/doc-inetiwez4592989.shtml",
+          "quote": "新能源车锂电池市场分析-2025年3月"
+        },
+        {
+          "url": "https://finance.sina.com.cn/tech/roll/2025-08-19/doc-infmnxmf2674558.shtml",
+          "quote": "TrendForce：2025Q2 新能源车汽车销量达 486.8 万辆，同比增长 30%"
+        },
+        {
+          "url": "https://cj.sina.com.cn/articles/view/5952915705/162d248f906702gxcm",
+          "quote": "2025年全球动力电池市场分析：装机量达1,187GWh，CATL与BYD双雄称霸"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "EVDEMAND",
+      "target": "300750.SZ",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.37,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.37 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.37 (advisory; human pins)",
+      "proof_basis": "2024年中国新能源汽车销量1286.6万辆同比增长35.5%，2025年销量1649万辆同比增长28.17%，宁德时代作为核心电池供应商，前五大客户合计销售占比37.03%，需求持续增长直接拉动其电池出货。",
+      "proof_revenue_share_basis": "前五大客户合计销售占比37.03%，估计",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://finance.sina.com.cn/roll/2025-01-14/doc-ineewnhi1555957.shtml",
+          "quote": "2024年产销均超1280万辆，中国新能源汽车连续十年全球领跑"
+        },
+        {
+          "url": "https://news.qq.com/rain/a/20260126A02W5G00",
+          "quote": "2025年中国新能源汽车市场销售总量达到1649万辆，同比增长28.17%"
+        },
+        {
+          "url": "https://zhuanlan.zhihu.com/p/1911710002357448822",
+          "quote": "2024年，宁德时代前三大配套客户为特斯拉、吉利汽车、问界汽车"
+        },
+        {
+          "url": "https://hzdaily.hangzhou.com.cn/mrsb/2025/03/25/article_detail_3_20250325A153.html",
+          "quote": "宁德时代2024年的前五大车企客户为特斯拉、吉利、宝马、大众和蔚来"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "EVDEMAND",
+      "target": "300014.SZ",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.21,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.21 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.21 (advisory; human pins)",
+      "proof_basis": "2024年中国新能源汽车销量同比增长35.5%，2025年同比增长28.17%，亿纬锂能作为电池供应商，前五大客户销售额占营业收入21.44%，需求增长带动其电池业务营收。",
+      "proof_revenue_share_basis": "前五大客户销售额占营业收入21.44%，估计",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://www.52audio.com/archives/235396.html",
+          "quote": "亿纬锂能2024年实现营收486.15亿元，净利润40.76亿元"
+        },
+        {
+          "url": "https://www.stcn.com/article/detail/1673421.html",
+          "quote": "亿纬锂能前五大客户销售额总计104.23亿元，占营业收入的21.44%，其中第一名客户销售额为26.86亿元，占营业收入的5.53%"
+        },
+        {
+          "url": "https://libattery.ofweek.com/2025-01/ART-36008-8120-30655372.html",
+          "quote": "大众集团、国轩高科、亿纬锂能派发采购大单"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "EVDEMAND",
+      "target": "002074.SZ",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.72,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.72 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.72 (advisory; human pins)",
+      "proof_basis": "2024年中国新能源汽车销量同比增长35.5%，2025年同比增长28.17%，国轩高科动力电池收入占营业收入72.47%，且大众汽车为其第一大股东并获定点，需求增长直接拉动其动力电池业务。",
+      "proof_revenue_share_basis": "动力电池收入占营业收入72.47%，估计",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://finance.sina.com.cn/stock/aiassist/yjbg/2025-04-25/doc-ineuieui3039487.shtml",
+          "quote": "国轩高科2024年营收353.92亿元同比增11.98%，净利润12.07亿元同比增28.56%"
+        },
+        {
+          "url": "https://libattery.ofweek.com/2025-04/ART-36008-8120-30661989.html",
+          "quote": "国轩高科2024年营收354亿元，与大众电池项目再延期2年"
+        },
+        {
+          "url": "https://www.12365auto.com/news/20211215/468705.shtml",
+          "quote": "大众持有国轩高科26.47%股权 成第一大股东"
+        },
+        {
+          "url": "https://www.cs.com.cn/ssgs/gsxw/202305/t20230510_6343377.html",
+          "quote": "国轩高科获大众汽车集团海外市场定点"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "EVDEMAND",
+      "target": "688005.SH",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.3,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.3 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.3 (advisory; human pins)",
+      "proof_basis": "2024年中国新能源汽车销量同比增长35.5%，2025年同比增长28.17%，容百科技作为锂电池正极材料供应商，与宁德时代签署超1200亿元采购协议，下游需求增长拉动其正极材料出货。",
+      "proof_revenue_share_basis": "与宁德时代协议总销售金额超1200亿元，但未披露对宁德时代收入占比，保守估计高值0.30",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://m.hexun.com/stock/2025-04-09/218408640.html",
+          "quote": "容百科技2024年净利润2.96亿元"
+        },
+        {
+          "url": "https://www.nbd.com.cn/articles/2026-01-15/4222496.html",
+          "quote": "容百科技与宁德时代签署合作协议，容百科技预计向宁德时代国内区域合计供应305万吨产品，年均供应量超过50万吨，协议总销售金额超过1200亿元"
+        },
+        {
+          "url": "https://www.nbd.com.cn/articles/2025-11-16/4144948.html",
+          "quote": "钠电产业化再提速，容百科技获宁德时代60%采购量承诺"
+        },
+        {
+          "url": "https://finance.sina.com.cn/stock/relnews/cn/2025-04-11/doc-inesunpw1595845.shtml",
+          "quote": "容百科技2024年主营产品销量同比增长超20% 全球市占率再创新高"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "EVDEMAND",
+      "target": "002709.SZ",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.39,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.39 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.39 (advisory; human pins)",
+      "proof_basis": "天赐材料是电解液龙头，其最大客户宁德时代（单客户营收占比39%）及比亚迪等均为新能源车电池厂，新能源车销量需求上升将直接拉动其电解液销量（2025年销量72万吨+，同比增长44%）。",
+      "proof_revenue_share_basis": "单客户营收占比39%（来源：新浪财经），估计",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://k.sina.cn/article_7857201856_1d45362c0019058wys.html",
+          "quote": "天赐材料深度绑定宁德时代（单客户营收占比39%）、比亚迪等头部电池厂"
+        },
+        {
+          "url": "https://finance.sina.com.cn/roll/2025-09-26/doc-infruzvs0635557.shtml",
+          "quote": "A股600亿市值电解液龙头递表港交所 最大客户贡献近四成营收"
+        },
+        {
+          "url": "https://finance.sina.com.cn/stock/relnews/cn/2025-11-07/doc-infwqrfr2434686.shtml",
+          "quote": "天赐材料大客户电解液锁单量已达300万吨"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "EVDEMAND",
+      "target": "300037.SZ",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.15,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.15 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.15 (advisory; human pins)",
+      "proof_basis": "新宙邦为电池化学品（电解液）供应商，2025年电池化学品营收66.79亿元同比增长30.57%，并与宁德时代签订2026-2028年合计30万吨电解液采购协议，新能源车销量需求上升将拉动其电解液出货。",
+      "proof_revenue_share_basis": "电池化学品营收占比未明确披露，但电解液主要面向新能源车电池客户，保守估计为中（估计）",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://finance.sina.com.cn/wm/2026-06-07/doc-iniaqtnn6277901.shtml",
+          "quote": "新宙邦与宁德时代签订《电解液合作协议》，合作周期为2026年至2028年，2026年采购量5万吨，2027年10万吨，2028年15万吨"
+        },
+        {
+          "url": "https://www.stcn.com/article/detail/3947540.html",
+          "quote": "新宙邦：与宁德时代签订电解液合作协议 预计2026—2028年采购量合计30万吨"
+        },
+        {
+          "url": "https://emweb.eastmoney.com/PC_HSF10/ResearchReport/Index?type=soft&code=SZ002709",
+          "quote": "电池化学品收入增长是业绩增长主因，2025年电池化学品营业收入为66.79亿元，同比增长30.57%"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "EVDEMAND",
+      "target": "002812.SZ",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.15,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.15 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.15 (advisory; human pins)",
+      "proof_basis": "恩捷股份主营锂电池隔膜（2025年营收占比83.64%），主要客户包括宁德时代、比亚迪等国内主流锂电池企业，产品广泛应用于新能源汽车电池，新能源车销量需求上升将拉动其隔膜出货。",
+      "proof_revenue_share_basis": "隔膜产品营收占总营收83.64%，但其中新能源车电池客户占比未明确披露，保守估计为中（估计）",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://emweb.eastmoney.com/PC_HSF10/ResearchReport/Index?type=web&code=SZ002812",
+          "quote": "锂电池隔离膜产品的主要客户包括宁德时代、中创新航、国轩高科、亿纬锂能、比亚迪、孚能、力神等国内主流锂电池企业"
+        },
+        {
+          "url": "http://qxb-pdf-osscache.qixin.com/AnBaseinfo/b9823c26539900ff1f0670481cab13ad.PDF",
+          "quote": "2025年上半年，锂电池隔离膜产品营业收入占公司总营业收入的83.64%"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "EVDEMAND",
+      "target": "300568.SZ",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.15,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.15 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.15 (advisory; human pins)",
+      "proof_basis": "星源材质生产锂离子电池隔膜，主要客户覆盖宁德时代、比亚迪等知名锂电池厂商，产品广泛应用于新能源汽车电池，新能源车销量需求上升将拉动其隔膜出货。",
+      "proof_revenue_share_basis": "主要客户为电池厂，但新能源车电池客户收入占比未明确披露，保守估计为中（估计）",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://cj.sina.com.cn/articles/view/5115326071/130e5ae7702002jsiy",
+          "quote": "星源材质(300568.SZ)：生产的锂离子电池隔膜产品广泛应用于新能源汽车、储能电站、医疗及数码类电子产品等领域"
+        },
+        {
+          "url": "https://m.sohu.com/a/826413470_122014422",
+          "quote": "星源材质(300568.SZ)：目前订单饱满，生产经营正常，主要客户覆盖宁德时代、比亚迪、中创新航、国轩高科、欣旺达等知名锂电池厂商"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "EVDEMAND",
+      "target": "002407.SZ",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.3,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.3 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.3 (advisory; human pins)",
+      "proof_basis": "多氟多与比亚迪签署2022-2025年采购不低于56050吨六氟磷酸锂协议，合同总价值约150亿元，新能源车销量需求增长将直接拉动其六氟磷酸锂出货。",
+      "proof_revenue_share_basis": "前五大客户收入占比55%，其中包含宁德时代和比亚迪，但未披露新能源车客户单独占比，估计为高。",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://www.cls.cn/detail/875110",
+          "quote": "盘后公告集锦|比亚迪大动作！采购这家龙头公司不低于5.6万吨六氟磷酸锂产品"
+        },
+        {
+          "url": "http://www.21jingji.com/article/20211115/herald/c64a942ed6adc19abcdd01b3f1f81c8d.html",
+          "quote": "抱紧比亚迪的\"大腿\"！多氟多再签\"大单\" 四年供应6.5万吨六氟磷酸锂"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "EVDEMAND",
+      "target": "002460.SZ",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.2,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.2 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.2 (advisory; human pins)",
+      "proof_basis": "赣锋锂业与特斯拉、宝马、大众、现代汽车等国际车企建立长期供货关系，2022-2024年向特斯拉指定电池厂商供应电池级氢氧化锂，年供应量约占公司总产能20%，新能源车销量增长将拉动其锂盐需求。",
+      "proof_revenue_share_basis": "前五大客户销售收入占比41.21%，但未披露新能源车客户单独占比，根据其与多家车企的供货关系估计为中。",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://www.cs.com.cn/ssgs/gsxw/202401/t20240119_6386121.html",
+          "quote": "赣锋锂业获现代汽车4年长单 客户圈再扩容"
+        },
+        {
+          "url": "https://finance.sina.com.cn/stock/hkstock/hkstocknews/2020-02-17/doc-iimxxstf2098703.shtml",
+          "quote": "赣锋锂业(01772)等国内主要锂、钴企业下游客户梳理"
+        },
+        {
+          "url": "https://www.21jingji.com/article/20240402/herald/bed996d5902778945249c34be6e2aefe.html",
+          "quote": "一年减利400亿元，谁是锂业公司\"真龙头\"？｜年报里的中国经济"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "EVDEMAND",
+      "target": "002466.SZ",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.15,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.15 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.15 (advisory; human pins)",
+      "proof_basis": "天齐锂业已进入全球新能源汽车行业头部企业供应链系统，主要客户包括全球动力电池制造商及新能源汽车企业，新能源车销量增长将拉动其锂产品需求。",
+      "proof_revenue_share_basis": "前五大客户销售收入占比61.81%，但未披露新能源车客户单独占比，估计为中。",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://paper.cnstock.com/html/2025-03/27/content_2040964.htm",
+          "quote": "天齐锂业股份有限公司2024年年度报告摘要"
+        },
+        {
+          "url": "https://m.sohu.com/a/877093110_120995572",
+          "quote": "天齐锂业(002466)2024年年报解读：锂矿收入的大幅下降导致公司营收的大幅下降"
+        },
+        {
+          "url": "https://pdf.dfcfw.com/pdf/H2_AN202503261647856633_1.pdf",
+          "quote": "天齐锂业股份有限公司2024 年年度报告全文"
+        },
+        {
+          "url": "https://finance.sina.com.cn/roll/2025-07-29/doc-inficnea7855356.shtml",
+          "quote": "2025上半年比亚迪全球销量力压特斯拉，在世界多国领跑！"
+        },
+        {
+          "url": "https://www.news.cn/fortune/20260103/15dc15b33b0942278c36bb8604e63d57/c.html",
+          "quote": "比亚迪全年纯电动汽车销量首次超过特斯拉成为全球第一"
+        },
+        {
+          "url": "https://finance.sina.com.cn/tech/roll/2025-07-30/doc-infifkuy8530760.shtml",
+          "quote": "比亚迪2025年上半年累计销量达214.6万辆 蝉联中国/全球销冠"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "002460.SZ",
+      "target": "688005.SH",
+      "edge_type": "supplier",
+      "curated_sign": "±",
+      "proof_sign": "±",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.15,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=± (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.15 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.15 (advisory; human pins)",
+      "proof_basis": "赣锋锂业是容百科技主要锂供应商之一，锂盐为正极材料关键原料且成本占比约七成，但证据未明确容百对赣锋的具体采购占比，且赣锋客户分散（前五大客户占41.21%），传导方向取决于锂盐价格走势：涨价时容百成本承压（-1），但若容百能向下游传导或锂价下跌则利好（+1），当前无明确价格趋势信号。",
+      "proof_revenue_share_basis": "估计；容百主要锂供应商包括赣锋、雅保、天齐、华友等多家，赣锋为其中之一但未披露具体份额，保守估计为中等偏低水平。",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://file.finance.qq.com/finance/hs/pdf/2025/04/10/1223045691.PDF",
+          "quote": "与国内外知名的上游供应商如赣峰锂业、雅保、格林美、天齐锂业、华友钴业进行采购，涉及镍、钴、锰、锂等主要原材料"
+        },
+        {
+          "url": "http://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESH_STOCK/2025/2025-4/2025-04-10/10858685.PDF",
+          "quote": "容百科技与国内外知名的上游供应商如赣峰锂业、雅保、格林美、天齐锂业、华友钴业建立了长期合作关系"
+        },
+        {
+          "url": "https://libattery.ofweek.com/2024-08/ART-36008-8120-30643536.html",
+          "quote": "赣锋锂业氢氧化锂的综合产能约5万吨/年，目标是达到7.8万吨/年；赣锋锂业计划于2025年或之前将形成总计年产不低于20万吨/年LCE的锂产品供应能力"
+        },
+        {
+          "url": "https://www.ganfenglithium.com/pro2_detail/id/5.html",
+          "quote": "电池级氢氧化锂、电池级碳酸锂等锂化合物产品，广泛应用于电动汽车、储能、便携式电子设备等锂电池材料"
+        },
+        {
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202405281634748761_1.pdf",
+          "quote": "锂铁锂正极的原材料成本占比分别约为九成和七成，原材料成本占比高导致企业难以通过生产制造优化实现大规模、持续性降本"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "688005.SH",
+      "target": "300750.SZ",
+      "edge_type": "supplier",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.05,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.05 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.05 (advisory; human pins)",
+      "proof_basis": "容百科技是宁德时代正极材料核心供应商，2024年采购额82.3亿元占容百科技销售额54.54%，且2025年钠电正极承诺采购量不低于60%，2026年签署磷酸铁锂超1200亿元长期协议，表明宁德时代关键原材料供应稳定且成本可控，利好其盈利。",
+      "proof_revenue_share_basis": "估计；宁德时代2024年营收约4000亿元，从容百科技采购82.3亿元占比约2%，但正极材料为电池关键成本项，保守估计暴露占比为低。",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://www.nbd.com.cn/articles/2025-11-16/4144948.html",
+          "quote": "钠电产业化再提速，容百科技获宁德时代60%采购量承诺。容百科技发布公告称，公司与宁德时代签署了《合作协议》。根据协议，宁德时代将容百科技锁定为其\"钠电正极粉料第一供应商\"，宁德时代承诺，在容百科技满足相关要求的前提下，每年采购量不低于其总采购量的60%。"
+        },
+        {
+          "url": "https://finance.sina.com.cn/jjxw/2025-11-16/doc-infxqzie4565557.shtml",
+          "quote": "宁德时代将容百科技锁定为其\"钠电正极粉料第一供应商\"，宁德时代承诺，每年采购量不低于其总采购量的60%。协议有效期自签署日起至2029年12月31日，到期前3个月如双方无异议将自动续约。"
+        },
+        {
+          "url": "https://finance.sina.com.cn/roll/2026-01-14/doc-inhhhhqr8386062.shtml",
+          "quote": "305万吨磷酸铁锂大单敲定！2026年1月13日晚间，容百科技宣布与宁德时代签署《磷酸铁锂正极材料采购合作协议》，协议约定自2026年第一季度至2031年容百科技向宁德时代供应约305万吨磷酸铁锂正极材料，总销售金额超1200亿元。"
+        },
+        {
+          "url": "https://www.nbd.com.cn/articles/2025-11-16/4144948.html",
+          "quote": "2022年1月，两家公司签署战略合作暨长期供货协议。根据协议约定，宁德时代预计在2022年向容百科技采购高镍三元正极材料约10万吨；2023年至2025年底，宁德时代将容百科技作为其三元正极粉料第一供应商。"
+        },
+        {
+          "url": "https://caifuhao.eastmoney.com/news/20260114202339725175330.html",
+          "quote": "2024年，容百科技前五名客户销售额为119.4亿元，占年度销售总额的79.10%。其中，第一大客户的销售额为82.3亿元，占年度销售总额的54.54%。"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "ESDEMAND",
+      "target": "300274.SZ",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.32,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.32 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.32 (advisory; human pins)",
+      "proof_basis": "2024年储能行业收入249.59亿元，占公司总营收32.06%，全球储能系统出货28GWh，客户包括沙特ALGIHAZ（7.8GWh项目）等国际储能项目业主，储能需求增长直接拉动其储能系统营收。",
+      "proof_revenue_share_basis": "2024年储能行业收入占公司总营收32.06%，来源为新浪财经。",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://finance.sina.com.cn/stock/aigc/stockfs/2025-04-27/doc-ineuqumz7624342.shtml",
+          "quote": "2024年，阳光电源储能行业收入249.59亿元，占比32.06%，同比增长40.21%；储能系统毛利率36.69%，2024年公司储能系统全球发货28GWh"
+        },
+        {
+          "url": "https://www.jiemian.com/article/11422519.html",
+          "quote": "7月15日，阳光电源与沙特ALGIHAZ成功签约全球最大储能项目，容量高达7.8GWh，将有效提高沙特电网稳定性和可靠性"
+        },
+        {
+          "url": "https://m.bjx.com.cn/mnews/20240716/1389284.shtml",
+          "quote": "阳光电源与沙特ALGIHAZ成功签约全球最大储能项目，容量高达7.8GWh，阳光电源将为其提供1500多套PowerTitan2.0液冷储能系统"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "ESDEMAND",
+      "target": "688063.SH",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.29,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.29 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.29 (advisory; human pins)",
+      "proof_basis": "2024年储能营收19.58亿元，前五大客户销售贡献占比28.51%，主要客户为英国Segen、德国Krannich等国际户用储能系统集成商，储能需求增长拉动其户用储能系统销售。",
+      "proof_revenue_share_basis": "前五大客户销售贡献占比28.51%，来源为2024年年报；储能营收占比未单独披露，保守估计接近该比例，注明「估计」。",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://finance.sina.com.cn/roll/2025-04-16/doc-inetkanw0129885.html",
+          "quote": "派能科技2024年报：储能营收19.58亿，毛利率28.9%；派能科技主要出口海外市场；派能科技在户储主要市场欧洲积累了Sonnen、Segen、Krannich、Energy等多家户储系统合作客户"
+        },
+        {
+          "url": "http://static.cninfo.com.cn/finalpage/2025-04-12/1223071587.PDF",
+          "quote": "派能科技2024年年度报告，前五大客户销售贡献占比为28.51%"
+        },
+        {
+          "url": "https://www.chu21.com/html/chunengy-27525.shtml",
+          "quote": "派能科技在户储主要市场欧洲积累了Sonnen、Segen、Krannich、Energy等多家户储系统合作客户，海外户储业务营收增长"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "ESDEMAND",
+      "target": "300750.SZ",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.16,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.16 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.16 (advisory; human pins)",
+      "proof_basis": "2024年储能电池系统营收572.9亿元，占总营收15.83%，储能电芯出货量全球第一，连续四年居首，参与晋江30MW/108.8MWh储能电站项目，储能需求增长直接拉动其储能电池系统营收。",
+      "proof_revenue_share_basis": "2024年储能电池系统营收占总营收15.83%，来源为新浪财经。",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://finance.sina.com.cn/tech/roll/2025-03-17/doc-inepxuqm9725361.shtml",
+          "quote": "宁德时代2024年储能电池系统营收572.9亿元，占总营收15.83%，毛利率26.84%，同比增加8.19个百分点；宁德时代储能电芯全球市占率36.5%"
+        },
+        {
+          "url": "https://m.thepaper.cn/wifiKey_detail.jsp?contid=6870628",
+          "quote": "国家电网综合能源服务集团和宁德时代各投160万元，合资成立国网时代(福建)储能发展有限公司，各持40%股份"
+        },
+        {
+          "url": "https://www.catl.com/othercase/403.html",
+          "quote": "晋江100MWh级储能电站，宁德时代成功应用于福建晋江30MW/108MWh能源存储站，成为新的百兆瓦时级能源存储示范项目"
+        },
+        {
+          "url": "https://libattery.ofweek.com/2023-07/ART-36008-8120-30604251.html",
+          "quote": "中国能建磷酸铁锂电池储能系统集采，宁德时代中标金额最高达21.6亿元"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "ESDEMAND",
+      "target": "300014.SZ",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.39,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.39 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.39 (advisory; human pins)",
+      "proof_basis": "2024年储能电池营收190.27亿元，占总营收39.14%，储能电池出货量50.45GWh，同比增长91.90%，全球排名第二，主要客户包括华为、Powin等国际EPC/系统集成商，储能需求增长直接拉动其储能电池营收。",
+      "proof_revenue_share_basis": "2024年储能电池营收占总营收39.14%，来源为52audio。",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://www.52audio.com/archives/235396.html",
+          "quote": "亿纬锂能2024年储能电池营收190.27亿元，占总营收39.14%；2024年亿纬锂能储能电池出货量突破50GWh大关，达50.45GWh，同比飙升91.90%"
+        },
+        {
+          "url": "https://m.21jingji.com/article/20240410/1236bc8863e324ffa881fa32c2ce3efe.html",
+          "quote": "亿纬锂能储能电芯全球第二，与华为等国际EPC/系统集成商合作，满足全球储能需求"
+        },
+        {
+          "url": "https://www.evebattery.com/news-968",
+          "quote": "亿纬锂能与华为等价值链头部企业打造商用车电池展区，体现两家公司在能源解决方案领域的合作"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "002407.SZ",
+      "target": "002709.SZ",
+      "edge_type": "supplier",
+      "curated_sign": "±",
+      "proof_sign": "±",
+      "curated_revenue_share": null,
+      "proof_revenue_share": null,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "none",
+      "sign_verdict": "proof=± (curated unpinned)",
+      "revenue_share_verdict": "—",
+      "graph_action": "KEEP (corroborated) — no change",
+      "proof_basis": "未检索到002709.SZ与002407.SZ之间的供货关系或任何相关事实，无法判断传导方向。",
+      "proof_revenue_share_basis": "无证据，无法估计",
+      "curated_revenue_share_basis": "",
+      "sources": []
+    },
+    {
+      "scope": "new_energy",
+      "source": "ESDEMAND",
+      "target": "605117.SH",
+      "edge_type": "customer",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.25,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.25 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.25 (advisory; human pins)",
+      "proof_basis": "2026年国内储能新增装机预计265GWh同比增长63%，直接拉动公司储能电池包业务（2024年营收24.5亿元同比+177.2%，2025年上半年营收14.2亿元同比+85.8%），且公司户用储能逆变器全球市占率24.4%居第一，储能收入目标2026年超60亿元。",
+      "proof_revenue_share_basis": "2025年上半年储能电池包营收占总营收25.8%，估计",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://finance.sina.com.cn/stock/relnews/cn/2025-04-15/doc-inetfaix4296576.shtml",
+          "quote": "储能逆变器带动储能电池包业务放量上升！德业股份2024年营业总收入111.95亿元，储能电池包业务实现营收24.51亿元，同比增长177.2%，全年出货46.5万台，同比增长264.3%"
+        },
+        {
+          "url": "https://finance.sina.com.cn/jjxw/2026-04-13/doc-inhuihze5754797.shtml",
+          "quote": "2026年国内储能新增装机265GWh，同比增长63%，预计到2030年年均复合增长率约20%-25%"
+        },
+        {
+          "url": "https://www.stcn.com/article/detail/1635109.html",
+          "quote": "德业股份拟建设年产16GWh工商储生产线，投资21.27亿元，计划2028年完成建设，以应对工商储需求增长"
+        },
+        {
+          "url": "https://caifuhao.eastmoney.com/news/20260525094645246856240.html",
+          "quote": "德业股份户用储能逆变器以24.4%的市占率稳居全球第一，2025年上半年储能电池包营收14.2亿元，同比增长85.8%，占公司总营收25.8%"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "601865.SH",
+      "target": "601012.SH",
+      "edge_type": "supplier",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.15,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.15 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.15 (advisory; human pins)",
+      "proof_basis": "福莱特与隆基绿能签订2022-2023年约104亿元光伏玻璃长期采购协议，隆基是主要客户，玻璃供应稳定利好隆基生产。",
+      "proof_revenue_share_basis": "估计，基于104亿元合同占隆基同期组件成本比例，未披露具体占比。",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://www.energytrend.cn/news/20210209-92785.html",
+          "quote": "隆基绿能与福莱特签订的光伏玻璃采购协议中，合同约定2021年新增采购量2,786万平方米，2022年-2023年按46GW组件用量采购，合同总金额约104亿元人民币（不含税）"
+        },
+        {
+          "url": "https://finance.sina.com.cn/roll/2021-02-09/doc-ikftssap4898095.shtml",
+          "quote": "隆基绿能科技股份有限公司关于签订战略合作协议暨重大采购合同补充协议的公告"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "601865.SH",
+      "target": "002459.SZ",
+      "edge_type": "supplier",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.15,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.15 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.15 (advisory; human pins)",
+      "proof_basis": "福莱特与晶澳科技签订2021-2024年约46.18亿元、2.3亿平方米光伏玻璃采购合同，保障晶澳玻璃供应。",
+      "proof_revenue_share_basis": "估计，合同金额46.18亿元，占晶澳同期采购成本比例未披露。",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://m.hexun.com/stock/2021-07-30/204061088.html",
+          "quote": "福莱特(601865.SH)：与晶澳科技签署预估约46.18亿元的光伏玻璃销售合同"
+        },
+        {
+          "url": "https://paper.cnstock.com/html/2021-07/31/content_1501668.htm",
+          "quote": "福莱特玻璃集团股份有限公司关于签订重大合同的公告"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "601865.SH",
+      "target": "688223.SH",
+      "edge_type": "supplier",
+      "curated_sign": "±",
+      "proof_sign": "+1",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.3,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=+1 (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.3 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.3 (advisory; human pins)",
+      "proof_basis": "福莱特与晶科能源签订2024-2025年约105.24亿元光伏玻璃战略协议，2024年履行33.94亿元，占福莱特2022年主营收入68.33%，晶科为重要客户。",
+      "proof_revenue_share_basis": "估计，2024年履行金额33.94亿元，占晶科同期玻璃采购成本比例较高，基于合同规模判断。",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://www.yicai.com/news/101731079.html",
+          "quote": "福莱特：与晶科能源签订105.24亿元光伏玻璃销售战略合作协议"
+        },
+        {
+          "url": "https://news.solarbe.com/202304/16/366827.html",
+          "quote": "总金额超105亿！福莱特与晶科能源签订光伏玻璃大单"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "601865.SH",
+      "target": "688599.SH",
+      "edge_type": "supplier",
+      "curated_sign": "±",
+      "proof_sign": "±",
+      "curated_revenue_share": null,
+      "proof_revenue_share": null,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "none",
+      "sign_verdict": "proof=± (curated unpinned)",
+      "revenue_share_verdict": "—",
+      "graph_action": "KEEP (corroborated) — no change",
+      "proof_basis": "福莱特为天合光能光伏玻璃供应商之一，但未发现公开披露的具体采购合同金额，关系强度不明确。",
+      "proof_revenue_share_basis": "无公开披露数据，无法估计。",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://m.cls.cn/detail/1324113",
+          "quote": "福莱特当前国内合作客户主要有隆基绿能、晶科能源、东方日升、晶澳科技、正泰新能等"
+        },
+        {
+          "url": "https://finance.sina.com.cn/roll/2023-04-15/doc-imyqkwyx2752816.shtml",
+          "quote": "福莱特与晶科能源及其子公司计划于2024年至2025年向福莱特及子公司采购"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "002865.SZ",
+      "target": "601012.SH",
+      "edge_type": "supplier",
+      "curated_sign": "±",
+      "proof_sign": "±",
+      "curated_revenue_share": null,
+      "proof_revenue_share": null,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "none",
+      "sign_verdict": "proof=± (curated unpinned)",
+      "revenue_share_verdict": "—",
+      "graph_action": "KEEP (corroborated) — no change",
+      "proof_basis": "未检索到任何关于002865.SZ与601012.SH之间供货关系的证据，无法判断传导方向。",
+      "proof_revenue_share_basis": "无证据",
+      "curated_revenue_share_basis": "",
+      "sources": []
+    },
+    {
+      "scope": "new_energy",
+      "source": "002865.SZ",
+      "target": "002459.SZ",
+      "edge_type": "supplier",
+      "curated_sign": "±",
+      "proof_sign": "±",
+      "curated_revenue_share": null,
+      "proof_revenue_share": null,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "none",
+      "sign_verdict": "proof=± (curated unpinned)",
+      "revenue_share_verdict": "—",
+      "graph_action": "KEEP (corroborated) — no change",
+      "proof_basis": "未检索到任何关于002865.SZ与002459.SZ之间供货关系的证据，无法判断传导方向。",
+      "proof_revenue_share_basis": "无证据",
+      "curated_revenue_share_basis": "",
+      "sources": []
+    },
+    {
+      "scope": "new_energy",
+      "source": "603806.SH",
+      "target": "601012.SH",
+      "edge_type": "supplier",
+      "curated_sign": "±",
+      "proof_sign": "±",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.0671,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=± (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.0671 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.0671 (advisory; human pins)",
+      "proof_basis": "隆基绿能是福斯特第一大客户，营收占比6.71%，胶膜是组件关键材料，但证据未指明当前胶膜价格或供需是否构成隆基的盈利瓶颈或成本冲击，传导方向存在歧义。",
+      "proof_revenue_share_basis": "福斯特2024年报显示隆基绿能营收占比6.71%",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=603806&id=10856248",
+          "quote": "福斯特2024年报显示隆基绿能营收占比为6.71%，是前五大客户之一"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "603806.SH",
+      "target": "002459.SZ",
+      "edge_type": "supplier",
+      "curated_sign": "±",
+      "proof_sign": "±",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.0421,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=± (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.0421 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.0421 (advisory; human pins)",
+      "proof_basis": "晶澳科技是福斯特第二大客户，营收占比4.21%，胶膜为重要原材料，但证据未提供胶膜价格波动或供应紧张对晶澳盈利的具体影响，方向不确定。",
+      "proof_revenue_share_basis": "福斯特2024年报显示晶澳太阳能营收占比4.21%",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://finance.sina.com.cn/roll/2024-08-30/doc-incmkqcn3640395.shtml",
+          "quote": "晶澳科技是福斯特全球光伏胶膜龙头市场中的主要客户，采购胶膜用于组件生产"
+        },
+        {
+          "url": "https://file.finance.qq.com/finance/hs/pdf/2025/04/25/1223270849.PDF",
+          "quote": "晶澳科技2024年年报显示光伏胶膜是重要原材料采购项目"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "603806.SH",
+      "target": "688223.SH",
+      "edge_type": "supplier",
+      "curated_sign": "±",
+      "proof_sign": "±",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.15,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=± (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.15 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.15 (advisory; human pins)",
+      "proof_basis": "晶科能源是福斯特长期大客户，组件出货量大需胶膜供应，但证据未说明胶膜供需关系或价格变化对晶科盈利的明确传导方向，存在歧义。",
+      "proof_revenue_share_basis": "估计（无公开披露具体占比，晶科为福斯特主要客户，按中等级别保守估计）",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "https://news.solarbe.com/202501/16/385871.html",
+          "quote": "晶科、天合、隆基、通威、晶澳各揽10GW+组件，全年300GW+，其中晶科出货92.87GW排行第一，需要胶膜供应支撑"
+        },
+        {
+          "url": "https://www.china5e.com/news/news-1188948-1.html",
+          "quote": "晶科能源是福斯特主要客户，采购光伏胶膜用于组件生产"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "603806.SH",
+      "target": "688599.SH",
+      "edge_type": "supplier",
+      "curated_sign": "±",
+      "proof_sign": "±",
+      "curated_revenue_share": null,
+      "proof_revenue_share": 0.05,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "propose",
+      "sign_verdict": "proof=± (curated unpinned)",
+      "revenue_share_verdict": "PROPOSE 0.05 (none curated)",
+      "graph_action": "PROPOSE revenue_share=0.05 (advisory; human pins)",
+      "proof_basis": "天合光能采购福斯特胶膜作为重要原材料，但年报显示胶膜采购集中度较低，且证据未提供胶膜价格或供应对天合盈利的明确影响，方向不确定。",
+      "proof_revenue_share_basis": "估计（天合光能胶膜采购集中度较低，按低等级别保守估计）",
+      "curated_revenue_share_basis": "",
+      "sources": [
+        {
+          "url": "http://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-04-30/688599_20250430_N3ZL.pdf",
+          "quote": "天合光能2024年报披露主要采购原材料为硅料、硅片、玻璃、EVA胶膜和铝边框等，胶膜采购集中度较低"
+        },
+        {
+          "url": "https://paper.cnstock.com/html/2025-04/30/content_2062487.htm",
+          "quote": "天合光能2024年年度报告显示胶膜是生产组件的重要原材料，与福斯特等供应商有长期合作关系"
+        }
+      ]
+    },
+    {
+      "scope": "new_energy",
+      "source": "600732.SH",
+      "target": "601012.SH",
+      "edge_type": "supplier",
+      "curated_sign": "±",
+      "proof_sign": "±",
+      "curated_revenue_share": null,
+      "proof_revenue_share": null,
+      "curated_is_estimate": false,
+      "subject_check": "target_exposure",
+      "divergence_kind": "none",
+      "sign_verdict": "proof=± (curated unpinned)",
+      "revenue_share_verdict": "—",
+      "graph_action": "KEEP (corroborated) — no change",
+      "proof_basis": "未检索到600732.SH与601012.SH之间的供货关系证据，无法判断传导方向与机制。",
+      "proof_revenue_share_basis": "无证据，无法估计",
+      "curated_revenue_share_basis": "",
+      "sources": []
+    }
+  ]
+}
