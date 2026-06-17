@@ -1,0 +1,271 @@
+{
+  "schema": "kb-distiller-candidates@1",
+  "scope": "ai_compute",
+  "edge_type": "customer",
+  "model": "deepseek-chat",
+  "generated_by": "chain-distiller-scoped.mjs",
+  "firewall": "sign=±/never-pinned; weight=0.0; citation-required; number≠name; honest-null; target-scoped (read target annual report)",
+  "count": 13,
+  "candidates": [
+    {
+      "source": "005930",
+      "target": "002129.SZ",
+      "target_name": "TCL中环",
+      "edge_type": "customer",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": 0.0991,
+      "revenue_share_basis": "[AI·待核] 客户一   2,817,324,963.84   9.91%",
+      "source_ref": {
+        "doc": "TCL-中环新能源科技股份有限公司2024年年度报告全文1股票简称-TCL-中环.md",
+        "section": "前五名客户 2024年报",
+        "year": 2024
+      },
+      "is_top1": true,
+      "confound_check": "The extracted figure is the single share of the #1 customer (客户一 9.91%), not the top-5 total (27.61%), and the subject is TCL中环 (the TARGET) as the seller."
+    },
+    {
+      "source": "AAPL",
+      "target": "002241.SZ",
+      "target_name": "歌尔股份",
+      "edge_type": "customer",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": 0.2972,
+      "revenue_share_basis": "[AI·待核] 客户一   28,692,464,337.87   29.72%",
+      "source_ref": {
+        "doc": "unknown-anon-2025-1-2025-2026-04.md",
+        "section": "前五名客户 2025年报",
+        "year": 2025
+      },
+      "is_top1": true,
+      "confound_check": "The extracted figure is the 第一大客户 (客户一) single share of 29.72%, not the 前五名合计 79.05%. Subject is the TARGET (歌尔股份) as seller."
+    },
+    {
+      "source": "AAPL",
+      "target": "002384.SZ",
+      "target_name": "东山精密",
+      "edge_type": "customer",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": 0.4646,
+      "revenue_share_basis": "[AI·待核] 第一名   18,642,838,150.75   46.46%",
+      "source_ref": {
+        "doc": "unknown-anon-2025-2025-2026-4-22.md",
+        "section": "前五名客户 2025年报",
+        "year": 2025
+      },
+      "is_top1": true,
+      "confound_check": "Confirmed: the extracted 46.46% is the 第一大客户 (top-1 customer) single share from the TARGET's (002384.SZ) 前五名客户 table, not the 前五名合计 (64.33%). Subject is the TARGET (seller)."
+    },
+    {
+      "source": "AAPL",
+      "target": "002475.SZ",
+      "target_name": "立讯精密",
+      "edge_type": "customer",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": 0.5668,
+      "revenue_share_basis": "[AI·待核] 1   客户   1   188,381,234,900.29   56.68%",
+      "source_ref": {
+        "doc": "unknown-anon-2025-1-2025-2026-0292026-4.md",
+        "section": "前五名客户 2025年报",
+        "year": 2025
+      },
+      "is_top1": true,
+      "confound_check": "The extracted figure is the single share of the #1 customer (客户1, 56.68%), not the top-5 total (65.04%). Subject is the TARGET (立讯精密) as the seller."
+    },
+    {
+      "source": "AAPL",
+      "target": "601138.SH",
+      "target_name": "工业富联",
+      "edge_type": "customer",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": null,
+      "revenue_share_basis": null,
+      "source_ref": {
+        "doc": "unknown-anon-2025-1-270.md",
+        "section": "前五名客户 2025年报",
+        "year": 2025
+      },
+      "is_top1": null,
+      "confound_check": "The disclosure only provides the top-5 total (前五名客户销售额 55,985,437 万元，占年度销售总额 62.01%), with no per-customer or top-1 single share. Therefore revenue_share is null."
+    },
+    {
+      "source": "NVDA",
+      "target": "300394.SZ",
+      "target_name": "天孚通信",
+      "edge_type": "customer",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": 0.6331,
+      "revenue_share_basis": "[AI·待核] 1   Fabrinet   3,268,843,594.94   63.31%",
+      "source_ref": {
+        "doc": "unknown-anon-2025-1.md",
+        "section": "前五名客户 2025年报",
+        "year": 2025
+      },
+      "is_top1": true,
+      "confound_check": "The extracted figure is the single share of the #1 customer (Fabrinet) from the TARGET's 前五名客户 table, not the 前五名合计 (89.73%). Subject is the TARGET (天孚通信). The SOURCE (NVDA) is not named in the filing; the top-1 customer is Fabrinet, so the chain-map attribution of NVDA as the customer is unproven here."
+    },
+    {
+      "source": "NVDA",
+      "target": "300502.SZ",
+      "target_name": "新易盛",
+      "edge_type": "customer",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": 0.2297,
+      "revenue_share_basis": "[AI·待核] 第一名   5,706,560,719.37   22.97%",
+      "source_ref": {
+        "doc": "unknown-anon-2025-1-2025-2026-0092026-4.md",
+        "section": "前五名客户 2025年报",
+        "year": 2025
+      },
+      "is_top1": true,
+      "confound_check": "The extracted figure is the 第一大客户 (top-1 customer) single share of 22.97%, not the 前五名合计 (top-5 total) of 72.34%. Subject is the TARGET (新易盛/300502.SZ), as the disclosure is from its 年报 under '公司主要销售客户情况'."
+    },
+    {
+      "source": "NVDA",
+      "target": "300769.SZ",
+      "target_name": "德方纳米",
+      "edge_type": "customer",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": 0.3903,
+      "revenue_share_basis": "[AI·待核] 第一名   3,402,744,593.76   39.03%",
+      "source_ref": {
+        "doc": "unknown-anon-2025-1-2025-2026-4.md",
+        "section": "前五名客户 2025年报",
+        "year": 2025
+      },
+      "is_top1": true,
+      "confound_check": "The extracted figure is the 第一大客户 (top-1) single share of 39.03% from the TARGET's (德方纳米) 前五名客户 table, not the 前五名合计 (89.24%). Subject is the TARGET (seller)."
+    },
+    {
+      "source": "NVDA",
+      "target": "601138.SH",
+      "target_name": "工业富联",
+      "edge_type": "customer",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": null,
+      "revenue_share_basis": null,
+      "source_ref": {
+        "doc": "unknown-anon-2025-1-270.md",
+        "section": "前五名客户 2025年报",
+        "year": 2025
+      },
+      "is_top1": null,
+      "confound_check": "The disclosure only provides the top-5 total share (62.01%) and does not disclose a per-customer or top-1 single share. No individual customer share for the SOURCE (NVDA) is extractable. Subject is the TARGET (601138.SH)."
+    },
+    {
+      "source": "NVDA",
+      "target": "000977.SZ",
+      "target_name": "浪潮信息",
+      "edge_type": "customer",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": 0.3937,
+      "revenue_share_basis": "[AI·待核] 1   客户   1   6,488,002.76   39.37%",
+      "source_ref": {
+        "doc": "unknown-anon-2025-1-2025-2026-4-208823.md",
+        "section": "前五名客户 2025年报",
+        "year": 2025
+      },
+      "is_top1": true,
+      "confound_check": "The extracted figure is the 第一大客户 single share (39.37%) from the TARGET's (浪潮信息) 前五名客户 table, not the 前五名合计 (71.29%). Subject is the TARGET (seller)."
+    },
+    {
+      "source": "NVDA",
+      "target": "002463.SZ",
+      "target_name": "沪电股份",
+      "edge_type": "customer",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": 0.1426,
+      "revenue_share_basis": "[AI·待核] 客户 一   2,702,321,066   14.26%",
+      "source_ref": {
+        "doc": "unknown-anon-2025-2025.md",
+        "section": "前五名客户 2025年报",
+        "year": 2025
+      },
+      "is_top1": true,
+      "confound_check": "The extracted figure is the single share of the #1 customer (客户一) at 14.26%, not the top-5 total (53.32%). Subject is the TARGET (沪士电子股份有限公司 / 002463.SZ)."
+    },
+    {
+      "source": "NVDA",
+      "target": "002916.SZ",
+      "target_name": "深南电路",
+      "edge_type": "customer",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": 0.0746,
+      "revenue_share_basis": "[AI·待核] 第一名   1,765,109,029.49   7.46%",
+      "source_ref": {
+        "doc": "unknown-anon-2025-1-2025-2026-3.md",
+        "section": "前五名客户 2025年报",
+        "year": 2025
+      },
+      "is_top1": true,
+      "confound_check": "The extracted figure is the single share of the #1 customer (7.46%), not the top-5 total (18.42%). Subject is the TARGET (深南电路/002916.SZ) as the seller, reporting its own sales to customers."
+    },
+    {
+      "source": "NVDA",
+      "target": "300308.SZ",
+      "target_name": "中际旭创",
+      "edge_type": "customer",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": 0.2406,
+      "revenue_share_basis": "[AI·待核] 客户 A   9,201,495,755.91   24.06%",
+      "source_ref": {
+        "doc": "unknown-anon-300308-2026-020-2025-2026-03.md",
+        "section": "前五名客户 2025年报",
+        "year": 2025
+      },
+      "is_top1": true,
+      "confound_check": "The extracted figure is the single share of the #1 customer (客户 A) from the TARGET's (中际旭创) 前五名客户 table, not the top-5 total (75.98%). Subject is the TARGET (seller)."
+    }
+  ]
+}
