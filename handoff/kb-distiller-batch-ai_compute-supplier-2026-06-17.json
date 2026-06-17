@@ -1,0 +1,371 @@
+{
+  "schema": "kb-distiller-candidates@1",
+  "scope": "ai_compute",
+  "edge_type": "supplier",
+  "model": "deepseek-chat",
+  "generated_by": "chain-distiller-scoped.mjs",
+  "firewall": "sign=±/never-pinned; weight=0.0; citation-required; number≠name; honest-null; target-scoped (read target annual report)",
+  "count": 18,
+  "candidates": [
+    {
+      "source": "300394.SZ",
+      "target": "300308.SZ",
+      "target_name": "中际旭创",
+      "edge_type": "supplier",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": 0.3576,
+      "revenue_share_basis": "[AI·待核] 供应商 A   8,885,926,791.46   35.76%",
+      "source_ref": {
+        "doc": "unknown-anon-300308-2026-020-2025-2026-03.md",
+        "section": "前五名供应商 2025年报",
+        "year": 2025
+      },
+      "is_top1": true,
+      "confound_check": "The extracted figure is the single share of the TARGET's #1 supplier (供应商 A) as a percentage of the TARGET's total procurement (占年度采购总额比例), not the top-5 total (51.50%) and not the SOURCE's sales."
+    },
+    {
+      "source": "300394.SZ",
+      "target": "300502.SZ",
+      "target_name": "新易盛",
+      "edge_type": "supplier",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": 0.2387,
+      "revenue_share_basis": "[AI·待核] 第一名   3,666,795,583.83   23.87%",
+      "source_ref": {
+        "doc": "unknown-anon-2025-1-2025-2026-0092026-4.md",
+        "section": "前五名供应商 2025年报",
+        "year": 2025
+      },
+      "is_top1": true,
+      "confound_check": "The extracted figure is the 第一大供应商 single share (23.87%) of the TARGET's 年度采购总额, not the 前五大合计 (41.88%), and the subject is the TARGET's procurement (采购额占年度采购总额比例), not the SOURCE's sales."
+    },
+    {
+      "source": "002371.SZ",
+      "target": "688981.SH",
+      "target_name": "中芯国际",
+      "edge_type": "supplier",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": null,
+      "revenue_share_basis": null,
+      "source_ref": {
+        "doc": "unknown-anon-2025-1-232.md",
+        "section": null,
+        "year": null
+      },
+      "is_top1": null,
+      "confound_check": "The provided excerpts do not contain any supplier concentration disclosure (前五名供应商 or 第一大供应商). Only procurement model description is present, with no numerical share for any supplier. Therefore no figure can be extracted."
+    },
+    {
+      "source": "002371.SZ",
+      "target": "600584.SH",
+      "target_name": "长电科技",
+      "edge_type": "supplier",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": null,
+      "revenue_share_basis": null,
+      "source_ref": {
+        "doc": "unknown-anon-2025-1-221.md",
+        "section": "前五名供应商 2025年报",
+        "year": 2025
+      },
+      "is_top1": null,
+      "confound_check": "The disclosure only provides the top-5 total procurement share (38.85%) and does not break out the single largest supplier share. No per-supplier or top-1 share is disclosed, so revenue_share is null."
+    },
+    {
+      "source": "002129.SZ",
+      "target": "603986.SH",
+      "target_name": "兆易创新",
+      "edge_type": "supplier",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": null,
+      "revenue_share_basis": null,
+      "source_ref": {
+        "doc": "unknown-anon-2025-1-219.md",
+        "section": "前五名供应商 2025年报",
+        "year": 2025
+      },
+      "is_top1": null,
+      "confound_check": "The disclosure only provides the top-5 total procurement share (69.49%) and does not break out the single largest supplier's share. No per-supplier or top-1 share is disclosed, so revenue_share cannot be extracted."
+    },
+    {
+      "source": "002129.SZ",
+      "target": "688981.SH",
+      "target_name": "中芯国际",
+      "edge_type": "supplier",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": null,
+      "revenue_share_basis": null,
+      "source_ref": {
+        "doc": "unknown-anon-2025-1-232.md",
+        "section": null,
+        "year": null
+      },
+      "is_top1": null,
+      "confound_check": "The provided excerpts do not contain any supplier concentration disclosure (前五名供应商 or 第一大供应商 share). Only procurement model description is present, no numerical share. Hence null."
+    },
+    {
+      "source": "002916.SZ",
+      "target": "603019.SH",
+      "target_name": "中科曙光",
+      "edge_type": "supplier",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": null,
+      "revenue_share_basis": null,
+      "source_ref": {
+        "doc": "unknown-anon-2025-1-227.md",
+        "section": "前五名供应商 2025年报",
+        "year": 2025
+      },
+      "is_top1": null,
+      "confound_check": "The disclosure only provides the top-5 total procurement share (19.19%) and a single supplier share of 4.01% for '供应商1', but does not identify that supplier as 002916.SZ. The top-1 single share is disclosed (4.01%), but the supplier is anonymized; however, the chain map attribution is not proven by this filing. Since the target's top-1 supplier share is disclosed, it is extractable in principle, but the source (002916.SZ) is not named, so per rule 3 the number is not attributable to the source. The instruction requires reporting the number only if the source is the top-1 supplier; here the supplier is anonymized, so revenue_share is null."
+    },
+    {
+      "source": "002463.SZ",
+      "target": "000977.SZ",
+      "target_name": "浪潮信息",
+      "edge_type": "supplier",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": 0.3314,
+      "revenue_share_basis": "[AI·待核] 供应商   1   5,375,870.51   33.14%",
+      "source_ref": {
+        "doc": "unknown-anon-2025-1-2025-2026-4-208823.md",
+        "section": "前五名供应商 2025年报",
+        "year": 2025
+      },
+      "is_top1": true,
+      "confound_check": "The extracted figure is the 第一大供应商 single share (33.14%) from the TARGET's 前五名供应商 disclosure, representing the TARGET's procurement share from its top-1 supplier, not the top-5 total (74.01%) and not the SOURCE's sales."
+    },
+    {
+      "source": "002463.SZ",
+      "target": "601138.SH",
+      "target_name": "工业富联",
+      "edge_type": "supplier",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": null,
+      "revenue_share_basis": null,
+      "source_ref": {
+        "doc": "unknown-anon-2025-1-270.md",
+        "section": "前五名供应商 2025年报",
+        "year": 2025
+      },
+      "is_top1": null,
+      "confound_check": "The disclosure only provides the top-5 total supplier procurement share (58.36%), not the single share of the #1 supplier (第一大供应商). No per-supplier breakdown is given, so revenue_share cannot be extracted."
+    },
+    {
+      "source": "002837.SZ",
+      "target": "000977.SZ",
+      "target_name": "浪潮信息",
+      "edge_type": "supplier",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": 0.3314,
+      "revenue_share_basis": "[AI·待核] 供应商   1   5,375,870.51   33.14%",
+      "source_ref": {
+        "doc": "unknown-anon-2025-1-2025-2026-4-208823.md",
+        "section": "前五名供应商 2025年报",
+        "year": 2025
+      },
+      "is_top1": true,
+      "confound_check": "The extracted figure is the 第一大供应商 single share (33.14%) from the TARGET's 前五名供应商 disclosure, representing the TARGET's procurement share from its top-1 supplier, not the top-5 total (74.01%) and not the SOURCE's sales."
+    },
+    {
+      "source": "002837.SZ",
+      "target": "601138.SH",
+      "target_name": "工业富联",
+      "edge_type": "supplier",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": null,
+      "revenue_share_basis": null,
+      "source_ref": {
+        "doc": "unknown-anon-2025-1-270.md",
+        "section": "前五名供应商 2025年报",
+        "year": 2025
+      },
+      "is_top1": null,
+      "confound_check": "The disclosure only provides the top-5 total supplier procurement share (58.36%), not the single share of the #1 supplier (第一大供应商). No per-supplier breakdown is given, so revenue_share cannot be extracted."
+    },
+    {
+      "source": "300308.SZ",
+      "target": "000977.SZ",
+      "target_name": "浪潮信息",
+      "edge_type": "supplier",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": 0.3314,
+      "revenue_share_basis": "[AI·待核] 供应商   1   5,375,870.51   33.14%",
+      "source_ref": {
+        "doc": "unknown-anon-2025-1-2025-2026-4-208823.md",
+        "section": "前五名供应商 2025年报",
+        "year": 2025
+      },
+      "is_top1": true,
+      "confound_check": "The extracted figure is the 第一大供应商 single share (33.14%) from the TARGET's 前五名供应商 table, representing the TARGET's procurement share from its top-1 supplier, not the top-5 total (74.01%) and not the SOURCE's sales."
+    },
+    {
+      "source": "300499.SZ",
+      "target": "603019.SH",
+      "target_name": "中科曙光",
+      "edge_type": "supplier",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": null,
+      "revenue_share_basis": null,
+      "source_ref": {
+        "doc": "unknown-anon-2025-1-227.md",
+        "section": null,
+        "year": null
+      },
+      "is_top1": null,
+      "confound_check": "The provided excerpts only disclose the top-5 supplier total (19.19% of procurement) and a single supplier #1 with 4.01% of procurement, but the supplier is anonymized as '供应商1 (新增)' and there is no evidence that this anonymized supplier is the SOURCE (300499.SZ). The top-1 share (4.01%) is disclosed, but the name attribution cannot be confirmed from this filing. Per rule 3, the name→SOURCE attribution comes from the chain map, not this filing; however, the instruction requires extracting the figure only if the SOURCE is the TARGET's #1 supplier. Since the filing does not name the SOURCE, and the chain map attribution is not provided in the excerpts, I cannot confirm that the disclosed 4.01% corresponds to the SOURCE. Therefore, revenue_share is null."
+    },
+    {
+      "source": "603501.SH",
+      "target": "300769.SZ",
+      "target_name": "德方纳米",
+      "edge_type": "supplier",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": 0.1302,
+      "revenue_share_basis": "[AI·待核] 1   第一名   1,025,871,958.58   13.02%",
+      "source_ref": {
+        "doc": "unknown-anon-2025-1-2025-2026-4.md",
+        "section": "前五名供应商 2025年报",
+        "year": 2025
+      },
+      "is_top1": true,
+      "confound_check": "The extracted figure is the top-1 supplier's single share of the TARGET's annual procurement (采购总额), not the top-5 total, and the subject is the TARGET's purchases, not the SOURCE's sales."
+    },
+    {
+      "source": "300661.SZ",
+      "target": "601138.SH",
+      "target_name": "工业富联",
+      "edge_type": "supplier",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": null,
+      "revenue_share_basis": null,
+      "source_ref": {
+        "doc": "unknown-anon-2025-1-270.md",
+        "section": "前五名供应商 2025年报",
+        "year": 2025
+      },
+      "is_top1": null,
+      "confound_check": "The disclosure only provides the top-5 total procurement share (58.36%) and does not break out the single largest supplier's share. No per-supplier or top-1 share is disclosed, so revenue_share is null."
+    },
+    {
+      "source": "600584.SH",
+      "target": "603019.SH",
+      "target_name": "中科曙光",
+      "edge_type": "supplier",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": null,
+      "revenue_share_basis": null,
+      "source_ref": {
+        "doc": "unknown-anon-2025-1-227.md",
+        "section": "前五名供应商 2025年报",
+        "year": 2025
+      },
+      "is_top1": null,
+      "confound_check": "The disclosure only provides the top-5 total procurement share (19.19%) and a single supplier share of 4.01% for '供应商1 (新增)', but does not identify which supplier corresponds to 600584.SH. The top-1 supplier share for the SOURCE is not disclosed; only an anonymized '供应商1' with 4.01% is shown, and the name cannot be attributed. Therefore, revenue_share is null."
+    },
+    {
+      "source": "688981.SH",
+      "target": "002049.SZ",
+      "target_name": "紫光国微",
+      "edge_type": "supplier",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": 0.2144,
+      "revenue_share_basis": "[AI·待核] 供应商   1   700,795,532.08   21.44%",
+      "source_ref": {
+        "doc": "unknown-anon-2025-1-2025-2026-4-69cbcb.md",
+        "section": "前五名供应商 2025年报",
+        "year": 2025
+      },
+      "is_top1": true,
+      "confound_check": "The extracted figure is the single share of the TARGET's #1 supplier (供应商1)占年度采购总额比例 21.44%, which is the 第一大供应商 single share, not the 前五名合计 50.01%. The subject is the TARGET's procurement (采购总额), not the SOURCE's sales."
+    },
+    {
+      "source": "688981.SH",
+      "target": "603019.SH",
+      "target_name": "中科曙光",
+      "edge_type": "supplier",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": null,
+      "revenue_share_basis": null,
+      "source_ref": {
+        "doc": "unknown-anon-2025-1-227.md",
+        "section": "前五名供应商 2025年报",
+        "year": 2025
+      },
+      "is_top1": null,
+      "confound_check": "The disclosure only provides the top-5 total procurement share (19.19%) and a single supplier share of 4.01% for '供应商1 (新增)', but does not identify this supplier as 688981.SH. The top-1 single share is not attributable to the SOURCE, and no per-supplier share for the SOURCE is disclosed. Subject is the TARGET's procurement (采购总额), but the number cannot be extracted as the SOURCE's share."
+    }
+  ]
+}

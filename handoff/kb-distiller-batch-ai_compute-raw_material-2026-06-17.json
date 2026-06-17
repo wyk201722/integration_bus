@@ -1,0 +1,51 @@
+{
+  "schema": "kb-distiller-candidates@1",
+  "scope": "ai_compute",
+  "edge_type": "raw_material",
+  "model": "deepseek-chat",
+  "generated_by": "chain-distiller-scoped.mjs",
+  "firewall": "sign=±/never-pinned; weight=0.0; citation-required; number≠name; honest-null; target-scoped (read target annual report)",
+  "count": 2,
+  "candidates": [
+    {
+      "source": "COMM:COPPER",
+      "target": "002384.SZ",
+      "target_name": "东山精密",
+      "edge_type": "raw_material",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": null,
+      "revenue_share_basis": null,
+      "source_ref": {
+        "doc": "unknown-anon-2025-2025-2026-4-22.md",
+        "section": null,
+        "year": null
+      },
+      "is_top1": null,
+      "confound_check": "The filing only discloses aggregate 直接材料占营业成本比重 (71.07% for 2025) with no breakdown for 铜/铜箔 specifically. No commodity-specific cost share for COMM:COPPER is provided."
+    },
+    {
+      "source": "COMM:COPPER",
+      "target": "002916.SZ",
+      "target_name": "深南电路",
+      "edge_type": "raw_material",
+      "scope": "ai_compute",
+      "transmission_sign": "±",
+      "directional_weight": 0,
+      "review_state": "review:pending",
+      "lang": "zh",
+      "revenue_share": null,
+      "revenue_share_basis": null,
+      "source_ref": {
+        "doc": "unknown-anon-2025-1-2025-2026-3.md",
+        "section": null,
+        "year": null
+      },
+      "is_top1": null,
+      "confound_check": "The filing only discloses aggregate 直接材料 (60.05% of 营业成本) for the 电子电路 segment, with no specific breakdown for 铜/铜箔. No commodity-specific cost share for COMM:COPPER is provided."
+    }
+  ]
+}
