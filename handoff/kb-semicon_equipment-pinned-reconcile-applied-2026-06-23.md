@@ -26,15 +26,17 @@ profit −1.77% is the live disproof. The 2 policy edges also self-admitted no d
 - Kept: 拓荆←长江存储 0.20, 华虹 0.045, the 3 capex 0.30s. (Both these edges are now `±` per (1);
   rs retained as presence-only materiality.)
 
-## (4) Missing gold edge ingested — DONE (awaiting human +1)
-`晶圆厂capex → 长川科技 (300604)` created as **`±` / review:pending** with a MACHINE-advisory
-`proposed_sign = +1` + sourced `proposed_sign_basis` (长川 = 后道测试设备国产龙头, demand = 封测/fab
-test-capacity capex; FY25 rev 52.92亿 +45.31%). **The KB human pins the `+1` via `approve()`** (firewall:
-machine never pins). It will land as the 4th capex_driver `+1` once approved — not yet in the export above.
+## (4) Missing gold edge ingested + APPROVED `+1` — DONE
+`晶圆厂capex → 长川科技 (300604)` created, then the **operator approved the `+1`** (delegated
+2026-06-23 — operator was away from the app and authorized the pin after reviewing the advisory).
+sign_basis is AI-sourced (`[AI·待核]`, source-verify pending): 长川 = 后道测试设备国产龙头, demand =
+封测/fab test-capacity capex; FY25 rev 52.92亿 +45.31%. Now the **4th capex_driver `+1`** — included
+in the updated export above.
 
 ## Post-reconcile state
-`semicon_equipment`: **31 approved** (3 directional capex `+1` + 28 presence-only `±`) + **1 pending**
-(长川, advisory +1). Firewall intact — advisory, `directional_weight 0.0` until Phase-4.
+`semicon_equipment`: **32 approved** (4 directional capex `+1` + 28 presence-only `±`). Firewall
+intact — advisory, `directional_weight 0.0` until Phase-4. (The 长川 `+1` basis is `[AI·待核]`
+source-verify-pending; flag if you want it re-grounded before any Phase-4 weight.)
 
 **Loop closed: all 8 curated sectors reconciled AND applied.** Coverage-check edges quant flagged
 (盛美/华海清科/微导, 中微↔拓荆/北方华创 competitor) noted as non-blocking follow-ups.

@@ -6,17 +6,17 @@
   "source_of_truth": "reobsidian memory-daemon chain_edge entries, tag review:approved",
   "firewall": "transmission_sign ±1 set ONLY by human approve(); mining/creation writes ±. Each ±1 carries a human sign_basis. proposed_sign* = machine advisory (compare only).",
   "summary": {
-    "approved_total": 31,
+    "approved_total": 32,
     "rejected_total": 0,
-    "directional_pinned": 3,
-    "sign_plus1": 3,
+    "directional_pinned": 4,
+    "sign_plus1": 4,
     "sign_minus1": 0,
     "presence_only": 28,
     "with_revenue_share": 8,
     "directional_without_sign_basis": 0,
     "by_edge_type": {
       "policy_driver": 4,
-      "capex_driver": 3,
+      "capex_driver": 4,
       "customer": 18,
       "supplier": 6
     }
@@ -577,6 +577,24 @@
       "proposed_sign": "+1",
       "proposed_sign_basis": "[AI建议·待核] 北方华创累计获得长江存储86台工艺设备订单，占其设备采购量的32%，多款刻蚀、薄膜沉积等设备应用于长江存储产线。｜暴露估计 rs≈0.32 (证据显示北方华创订单占长江存储设备采购量的32%，据此估计（估计）)",
       "source_ref": null,
+      "provenance": null,
+      "tier": null
+    },
+    {
+      "id": "01KVSB8QSDK1W8CAF0ZKV1F49R",
+      "version": 2,
+      "observed_at": "2026-06-23T00:00:00Z",
+      "source": "UNLISTED:FAB_CAPEX",
+      "target": "300604.SZ",
+      "edge_type": "capex_driver",
+      "scope": "semicon_equipment",
+      "transmission_sign": 1,
+      "sign_basis": "[AI·待核] capex demand-pull (operator-approved 2026-06-23 via delegate; AI-sourced, source-verify pending): 长川科技(300604)为后道测试设备(测试机/分选机/探针台)国产龙头，测试机+分选机贡献95%+营收；需求由封测/晶圆厂测试产能capex驱动(主要客户长电34.46%/通富28.12%等封测厂)。2025营收52.92亿(+45.31%)、净利+190%随capex周期放量 → capex↑→测试设备订单↑→长川营收↑，一向性demand-pull(同拓荆/中微/北方华创capex_driver档)。源:长川2025年报+东吴/东兴研报。",
+      "revenue_share": null,
+      "revenue_share_basis": null,
+      "proposed_sign": 1,
+      "proposed_sign_basis": "[AI·待核] proposed +1 (capex demand-pull, 待人工核准): 长川科技(300604)为后道测试设备(测试机/分选机/探针台)国产龙头，测试机+分选机贡献95%+营收；需求由封测/晶圆厂测试产能capex驱动(主要客户长电34.46%/通富28.12%等封测厂)。2025营收52.92亿(+45.31%)、净利+190%随capex周期放量 → 晶圆厂/封测capex↑→测试设备订单↑→长川营收↑，一向性demand-pull(同拓荆/中微/北方华创capex_driver档)。源: 长川2025年报 + 东吴/东兴研报。",
+      "source_ref": "quant reconcile 2026-06-23 (missing gold edge); 长川2025年报",
       "provenance": null,
       "tier": null
     }
